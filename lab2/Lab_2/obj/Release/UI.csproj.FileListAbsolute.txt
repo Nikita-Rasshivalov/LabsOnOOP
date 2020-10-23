@@ -1,0 +1,10 @@
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\bin\Release\UI.exe.config
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\bin\Release\UI.exe
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\bin\Release\UI.pdb
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\bin\Release\Students.dll
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\bin\Release\Students.pdb
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\obj\Release\UI.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\obj\Release\UI.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\obj\Release\UI.csproj.CopyComplete
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\obj\Release\UI.exe
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Lab_2\obj\Release\UI.pdb

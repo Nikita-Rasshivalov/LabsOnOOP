@@ -1,0 +1,6 @@
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\bin\Release\Students.dll
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\bin\Release\Students.pdb
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\obj\Release\Students.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\obj\Release\Students.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\obj\Release\Students.dll
+C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\Students\obj\Release\Students.pdb
