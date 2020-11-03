@@ -16,7 +16,6 @@ namespace Students
         /// <returns>Students(First Second Third name</returns>
         public Student[] EnterStudent(Student[] student)
         {
-
             for (int i = 0; i < student.Length; i++)
             {
 
@@ -27,24 +26,26 @@ namespace Students
                     FirstName = TableExam.EnterFirstName(),
                     ThirdName = TableExam.EnterThirdName()
                 };
+                
             }
-
             return student;
         }
 
+     
         /// <summary>
         /// Exams and Marks input method
         /// </summary>
         /// <param name="student"></param>
         public void EnterExamsAndMarks(Student[] student)
         {
+
             Console.Clear();
             Console.WriteLine("Enter num of exams");
             int numOfExams;
             int numExam;
-
+        
             while (!Int32.TryParse(Console.ReadLine(), out numExam) || numExam < 1)
-                Console.WriteLine("Error");
+                Console.WriteLine("!!Error enter integer number!");
             numOfExams = numExam;
 
             for (int i = 0; i < student.Length; i++)
@@ -65,13 +66,14 @@ namespace Students
                     stud.Marks[countExams].Exam = new Exam(name);
                     Console.WriteLine($"{stud.FirstName} {stud.SecondName} {stud.ThirdName}");
                     Console.WriteLine("Enter mark on exam");
-                    while (!Int32.TryParse(Console.ReadLine(), out mark) || mark <1 || mark > 10 )
-                        Console.WriteLine("Error");
+                    while (!Int32.TryParse(Console.ReadLine(), out mark) || mark < 1 || mark > 10)
+                        Console.WriteLine("Error enter int number!");
                     stud.Marks[countExams].Mark = mark;
-                    
+                    stud.ExistanceMark = true;
 
-                    
                 }
+
+              
                 countExams++;
                 Console.Clear();
             }
@@ -84,19 +86,38 @@ namespace Students
         {
             int count = 0;
             Console.Clear();
+
+            for (int i = 0; i < student.Length; i++)
+            {
+                StudentMark studMark = new StudentMark(new Exam("None"), new int());
+            }
+
             foreach (var stud in student)
             {
                 count++;
                 Console.Write($" {count} {stud.SecondName} {stud.FirstName} {stud.ThirdName}    \t  |");
-                foreach (var studMark in stud.Marks)
-                {
-                    Console.Write($"{studMark.Exam.NameOfExam} / {studMark.Mark} | ");
 
+                if (stud.Marks == null)
+                {
+                    Console.WriteLine();
+                }
+                else
+                {
+                    for (int i = 0; i < stud.Marks.Length; i++)
+                    {
+                        StudentMark studMark = stud.Marks[i];
+                        Console.Write($"{studMark.Exam.NameOfExam} / {studMark.Mark} | ");
+                        
+                    }
+
+                    Console.WriteLine();
                 }
 
-                Console.WriteLine();
-
             }
+
+
+
+
         }
 
 
@@ -106,19 +127,23 @@ namespace Students
         /// <param name="student"></param>
         public void AddOrSubtract(Student[] student)
         {
+
             Console.WriteLine("What to do?  1 - to add(cложить): 2-subtract(отнять)");
             int num, choice;
-            int studOne, studTwo, st1,st2;
-            while (!Int32.TryParse(Console.ReadLine(), out num ))
-                Console.WriteLine("Error");
+            int studOne, studTwo, st1, st2;
+            while (!Int32.TryParse(Console.ReadLine(), out num))
+                Console.WriteLine("Error enter int number!");
             choice = num;
             Console.WriteLine("Enter numbers of student");
             while (!Int32.TryParse(Console.ReadLine(), out st1))
-                Console.WriteLine("Error");
+                Console.WriteLine("Error enter int number!");
             studOne = st1;
             while (!Int32.TryParse(Console.ReadLine(), out st2))
-                Console.WriteLine("Error");
+                Console.WriteLine("Error enter int number!");
             studTwo = st2;
+
+
+
             if (studOne <= student.Length && studOne > 0 && studTwo <= student.Length && studTwo > 0)
             {
                 double result;

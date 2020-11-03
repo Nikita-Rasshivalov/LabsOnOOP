@@ -18,3 +18,13 @@ C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\obj\Debug\UI.csproj.CoreCompi
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\obj\Debug\UI.csproj.CopyComplete
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\obj\Debug\UI.exe
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Lab_2\obj\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\bin\Debug\UI.exe.config
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\bin\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\bin\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\bin\Debug\Students.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\bin\Debug\Students.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\obj\Debug\UI.csproj.CopyComplete
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\obj\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Lab_2\obj\Debug\UI.pdb

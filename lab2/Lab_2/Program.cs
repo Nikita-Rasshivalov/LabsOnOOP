@@ -19,15 +19,17 @@ namespace UI
             int option = 0;
             var average = new Student();
             var addStudents = new AddStudents();
+
             Console.WriteLine("Enter numbers of students");
-            int numStud,numOfStudents;
-
+            int numStud, numOfStudents;
             while (!Int32.TryParse(Console.ReadLine(), out numStud) || numStud < 1)
-                Console.WriteLine("Error");
+                Console.WriteLine("Error enter int number!");
             numOfStudents = numStud;
-
-
             Student[] student = new Student[numOfStudents];
+            for (int i = 0; i < student.Length; i++)
+            {
+                student[i] = new Student();
+            }
             Console.Clear();
             while (option != 5)
             {
@@ -41,8 +43,29 @@ namespace UI
                         addStudents.EnterExamsAndMarks(student);
                         break;
                     case 2:
-                        addStudents.PrintStudents(student);
-                        addStudents.AddOrSubtract(student);
+                        bool exist = true;
+
+                        for (int i = 0; i < student.Length; i++)
+                        {
+                            if (student[i].ExistanceMark == false)
+                            {
+                            exist = false;
+                            }
+
+                        }
+                        if (exist == false)
+                        {
+                            Console.WriteLine("Not all students");
+                        }
+                        else
+                        {
+                            addStudents.PrintStudents(student);
+                            addStudents.AddOrSubtract(student);
+
+                        }
+                        
+
+                       
                         break;
                     case 3:
                         addStudents.PrintStudents(student);

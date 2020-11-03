@@ -10,3 +10,9 @@ C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Students\obj\Debug\Students.csprojA
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Students\obj\Debug\Students.dll
 C:\Users\nikit\Desktop\ООП\LabsOnOOP\lab2\Students\obj\Debug\Students.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\bin\Debug\Students.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\bin\Debug\Students.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\obj\Debug\Students.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\obj\Debug\Students.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\obj\Debug\Students.pdb

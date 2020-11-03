@@ -14,7 +14,7 @@ namespace Students
         /// <summary>
         /// Firstname input method
         /// </summary>
-        /// <returns>Firstname</returns>
+        /// <returns>Firstname</returns>C:\Users\nikit\Desktop\OOP\LabsC#\lab2\Students\TableExam.cs
         public static string EnterFirstName()
         {
             Student student = new Student();

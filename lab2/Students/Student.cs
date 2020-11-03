@@ -16,15 +16,19 @@ namespace Students
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
 
+        public bool ExistanceMark { get; set; } = false;
+
+
+
         public StudentMark[] Marks;
+
         /// <summary>
         /// Method for obtaining average value
         /// </summary>
         public double Average { get { return GetAverage(); } }
         double GetAverage()
         {
-            double sum = 0;
-            
+            double sum = 0;            
             foreach (var studMark in Marks)
                 sum += studMark.Mark;
 

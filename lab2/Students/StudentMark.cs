@@ -17,6 +17,7 @@ namespace Students
         {
             this.Exam = Exam;
             this.Mark = Mark;
+           
         }
 
         public StudentMark()
@@ -25,5 +26,8 @@ namespace Students
         }
         public Exam Exam;
         public int Mark;
+        
+
+
     }
 }
