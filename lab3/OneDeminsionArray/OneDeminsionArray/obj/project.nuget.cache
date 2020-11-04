@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1/EOxeC0OcitQAeu1axX8tbQ28khh9nDxm3EOei/704ujsLPbuF/n72lupxDZkrbjBNmstVxarisEQ9BEuUKOw==",
+  "dgSpecHash": "CRapfbeBsankyUwsHZqFssyjLe2t5udP5PXeZ/Dtkizob+HROwQISGHcSWTB78N/Mdq7Db2xBMwvW9TMR+Yiqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
+  "projectFilePath": "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikit\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

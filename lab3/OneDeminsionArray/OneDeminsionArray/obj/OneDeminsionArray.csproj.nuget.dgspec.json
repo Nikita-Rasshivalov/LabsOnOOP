@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj": {}
+    "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj": {
+    "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
+        "projectUniqueName": "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
         "projectName": "OneDeminsionArray",
-        "projectPath": "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
+        "projectPath": "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\OneDeminsionArray.csproj",
         "packagesPath": "C:\\Users\\nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikit\\Desktop\\OneDeminsionArray\\OneDeminsionArray\\obj\\",
+        "outputPath": "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab3\\OneDeminsionArray\\OneDeminsionArray\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",

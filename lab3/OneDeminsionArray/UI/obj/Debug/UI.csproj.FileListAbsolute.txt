@@ -8,3 +8,13 @@ C:\Users\nikit\Desktop\OneDeminsionArray\UI\obj\Debug\UI.csproj.CoreCompileInput
 C:\Users\nikit\Desktop\OneDeminsionArray\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\nikit\Desktop\OneDeminsionArray\UI\obj\Debug\UI.exe
 C:\Users\nikit\Desktop\OneDeminsionArray\UI\obj\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\bin\Debug\UI.exe.config
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\bin\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\bin\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\bin\Debug\OneDeminsionArray.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\bin\Debug\OneDeminsionArray.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\obj\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab3\OneDeminsionArray\UI\obj\Debug\UI.pdb
