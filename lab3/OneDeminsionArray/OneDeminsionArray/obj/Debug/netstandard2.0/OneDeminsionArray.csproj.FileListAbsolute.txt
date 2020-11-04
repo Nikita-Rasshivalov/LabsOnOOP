@@ -1,0 +1,9 @@
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\bin\Debug\netstandard2.0\OneDeminsionArray.deps.json
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\bin\Debug\netstandard2.0\OneDeminsionArray.dll
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\bin\Debug\netstandard2.0\OneDeminsionArray.pdb
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.AssemblyInfoInputs.cache
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.AssemblyInfo.cs
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.dll
+C:\Users\nikit\Desktop\OneDeminsionArray\OneDeminsionArray\obj\Debug\netstandard2.0\OneDeminsionArray.pdb
