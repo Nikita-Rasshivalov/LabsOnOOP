@@ -8,17 +8,28 @@ namespace Students
 {
     public class Student
     {
-        
+
         /// <summary>
-        /// 
+        /// First name
         /// </summary>
         public string FirstName { get; set; }
+        /// <summary>
+        /// Second name
+        /// </summary>
         public string SecondName { get; set; }
+        /// <summary>
+        /// Middle name
+        /// </summary>
         public string ThirdName { get; set; }
+        /// <summary>
+        /// Mark existnance
+        /// </summary>
 
         public bool ExistanceMark { get; set; } = false;
 
-
+        /// <summary>
+        /// Stud marks
+        /// </summary>
 
         public StudentMark[] Marks;
 
@@ -28,7 +39,7 @@ namespace Students
         public double Average { get { return GetAverage(); } }
         double GetAverage()
         {
-            double sum = 0;            
+            double sum = 0;
             foreach (var studMark in Marks)
                 sum += studMark.Mark;
 
@@ -40,8 +51,8 @@ namespace Students
         /// <summary>
         /// overload addition
         /// </summary>
-        /// <param name="firstStudent"></param>
-        /// <param name="secondStudent"></param>
+        /// <param name="firstStudent">First student</param>
+        /// <param name="secondStudent">Second student</param>
         /// <returns>result of additions averages values of exam of students</returns>
         public static double operator +(Student firstStudent, Student secondStudent)
         {
@@ -52,8 +63,8 @@ namespace Students
         /// <summary>
         /// overload subtraction
         /// </summary>
-        /// <param name="firstStudent"></param>
-        /// <param name="secondStudent"></param>
+        /// <param name="firstStudent">First student</param>
+        /// <param name="secondStudent">Second student</param>
         /// <returns>result of subtractions averages values of exam of students</returns>
         public static double operator -(Student firstStudent, Student secondStudent)
         {
