@@ -6,13 +6,15 @@ namespace OneDeminsionArray
     /// Class massive
     /// </summary>
     public class Massive
-    {
+    {   /// <summary>
+        ///     Arrays of integer numbers
+        /// </summary>
         private int[] array;
         /// <summary>
         /// Indexator
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">index</param>
+        /// <returns>Value of index</returns>
         public int this[int index]
         {
             get
@@ -20,17 +22,25 @@ namespace OneDeminsionArray
                 return array[index];
             }
             set { array[index] = value; }
-        }
+        }/// <summary>
+        /// Property that returns length of array
+        /// </summary>
         public int LengthOfMass
         {
             get { return array.Length; }
         }
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="array">Array</param>
         public Massive(int[] array)
         {
             this.array = array;
         }
-
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
+        /// <param name="array">Array</param>
         public Massive(Massive array)
         {
 
@@ -39,7 +49,7 @@ namespace OneDeminsionArray
         /// <summary>
         /// Operator overloading
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">Array of integer numbers elemets</param>
         /// <returns></returns>
 
         public static bool operator true(Massive array)
@@ -56,7 +66,7 @@ namespace OneDeminsionArray
         /// <summary>
         /// Operator overloading
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">Array of integer numbers elemets</param>
         /// <
         public static bool operator false(Massive array)
         {
@@ -69,7 +79,11 @@ namespace OneDeminsionArray
             return false;
         }
 
-
+        /// <summary>
+        /// Redefining the Equals method
+        /// </summary>
+        /// <param name="obj">Array of integer numbers elemets </param>
+        /// <returns>True if the specified object is equal to the current object; otherwise, false</returns>
 
         public override bool Equals(object obj)
         {

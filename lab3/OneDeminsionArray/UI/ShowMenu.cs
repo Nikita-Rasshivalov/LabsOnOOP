@@ -24,8 +24,8 @@ namespace UI
             Console.WriteLine("6: To Count positeve elements in Massive A and B and C after addition");
             Console.WriteLine("7: Replace zero elements in massive B on averega of massive A");
             Console.WriteLine("8: Exit");
-            while (!Int32.TryParse(Console.ReadLine(), out number))
-                Console.WriteLine("!!Error: Enter int number");
+            while (!Int32.TryParse(Console.ReadLine(), out number)||number<0 || number>8)
+                Console.WriteLine("!!Error: Enter int exist number");
             option = number;
             return option;
         }

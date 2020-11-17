@@ -4,7 +4,7 @@ using OneDeminsionArray;
 namespace UI
 {
     /// <summary>
-    /// 
+    /// Class working with arrays
     /// </summary>
     public class WorkingWithMassive
     {
@@ -15,18 +15,18 @@ namespace UI
         public static Massive EnterArray()
         {
 
-            Console.Write("Enter num of massive: ");
+            Console.Write("Enter num of array elements: ");
             int numOfArray, num;
             while (!Int32.TryParse(Console.ReadLine(), out num) || num < 1)
                 Console.WriteLine("!!!!Error. Please enter integer number");
             numOfArray = num;
             int[] array = new int[numOfArray];
-
+            Console.Write("Elements: \n");
             for (int i = 0; i < numOfArray; i++)
             {
                 while (!Int32.TryParse(Console.ReadLine(), out array[i]))
                     Console.WriteLine("!!!!Error. Please enter integer number");
-                array[i] = array[i];
+                
             }
 
             return new Massive(array);
@@ -37,7 +37,7 @@ namespace UI
         /// <summary>
         /// Array output method
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">Array</param>
         public static void OutMassive(Massive array)
         {
             for (var i = 0; i < array.LengthOfMass; i++)
@@ -53,7 +53,7 @@ namespace UI
         /// <summary>
         /// Calc positive elements
         /// </summary>
-        /// <param name="massives"></param>
+        /// <param name="massives">Arrays</param>
         /// <returns>Count positive elements</returns>
         public static int CalcPositiveElements(params Massive[] massives)
         {
@@ -70,7 +70,7 @@ namespace UI
                 }
 
             }
-            Console.WriteLine($"Positive elements = {countPositiveElements}");
+            Console.WriteLine($"\nPositive elements = {countPositiveElements}");
             return countPositiveElements;
         }
 
@@ -79,7 +79,7 @@ namespace UI
         /// <summary>
         /// Check zero elements
         /// </summary>
-        /// <param name="Array"></param>
+        /// <param name="array">Array A</param>
         /// <returns>Yes or No zero elements</returns>
         public static bool CheckZeroElem(Massive array)
         {
@@ -105,11 +105,11 @@ namespace UI
         /// <summary>
         /// Increas massive
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">Array </param>
         /// <returns>Increasing massive</returns>
         public static Massive AdditionOnIntegerNumber(Massive array)
         {
-            Console.WriteLine("By what number to increase? ");
+            Console.WriteLine("\nBy what number to increase? ");
             int number, increasingNum;
             while (!Int32.TryParse(Console.ReadLine(), out number))
                 Console.WriteLine("Enter int number! ");
@@ -126,8 +126,8 @@ namespace UI
         /// <summary>
         /// Calc positive elements in massives after increase
         /// </summary>
-        /// <param name="MassA"></param>
-        /// <param name="MassC"></param>
+        /// <param name="MassA">Array A</param>
+        /// <param name="MassC">Array C</param>
         /// <returns>Count positive elements</returns>
         public static int CalcPositiveElemInMassAandMassCafterAddition(Massive MassA, Massive MassC)
         {
@@ -162,9 +162,9 @@ namespace UI
         /// <summary>
         /// Calc positive elements in massives after increase
         /// </summary>
-        /// <param name="MassA"></param>
-        /// <param name="MassB"></param>
-        /// <param name="MassC"></param>
+        /// <param name="MassA">Array A</param>
+        /// <param name="MassB">Array B</param>
+        /// <param name="MassC">Array C</param>
         /// <returns>Count positive elements</returns>
 
         public static int CascPositiveElemInMassAandMassBandMassCafterAddition(Massive MassA, Massive MassB, Massive MassC)
@@ -204,8 +204,8 @@ namespace UI
         /// <summary>
         /// Replase zero elements
         /// </summary>
-        /// <param name="MassA"></param>
-        /// <param name="MassB"></param>
+        /// <param name="MassA">Array A</param>
+        /// <param name="MassB">Array B</param>
         /// <returns>Massive without zero elements</returns>
         public static Massive ReplaceZeroElements(Massive MassA, Massive MassB)
         {
@@ -239,7 +239,7 @@ namespace UI
         /// <summary>
         /// Calc average
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">Array </param>
         /// <returns>Average</returns>
         public static int CalcAverage(Massive array)
         {
