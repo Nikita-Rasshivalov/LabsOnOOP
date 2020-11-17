@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Figure
 {    /// <summary>
-     /// class - trapezoid
+     /// class - trapezoid.
      /// </summary>
     public class Trapeze
     {
