@@ -6,13 +6,13 @@ namespace UI
 {
     public static class WorkWithNumbers
     {
-
         public static void EnterNumbers(List<string> mobileNumbers)
         {
             Console.WriteLine("Сколько добавить номеров?");
             int number;
-            string input = Console.ReadLine();
-            int.TryParse(input, out number);
+            while (!Int32.TryParse(Console.ReadLine(), out number) | number < 1)
+                Console.WriteLine("Количество номеров не может быть меньше 1 и должны ровняться целому числу!!");
+            Console.Clear();
             Console.Write("Пример ввода:+37529(33)(44)(25)1111111 или 29(33)(44)(25)1111111 или 1111111  \n");
             for (int i = 0; i < number; i++)
             {
@@ -23,15 +23,18 @@ namespace UI
 
         public static void ShowNumbers(List<string> mobileNumbers)
         {
+            List<string> fullNumbers = new List<string>();
             List<string> numbersWithoutCode = new List<string>();
             List<string> simpleNumbers = new List<string>();
-            Numbers.ParseNumbers(mobileNumbers, numbersWithoutCode, simpleNumbers);
+            Numbers.ParseNumbers(mobileNumbers, fullNumbers, numbersWithoutCode, simpleNumbers);
+
             Console.WriteLine("Полные мобильные номера телефонов:");
-            if (mobileNumbers.Count != 0)
+            if (fullNumbers.Count != 0)
             {
-                foreach (var mobile in mobileNumbers)
+                foreach (var mobile in fullNumbers)
                 {
                     Console.WriteLine(mobile);
+
                 }
             }
             else
