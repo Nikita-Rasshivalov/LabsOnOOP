@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{0170DF69-3175-4127-A95E-6B1FB777A288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers", "PhoneNumbers\PhoneNumbers.csproj", "{D5B720A4-ED70-42FB-9A46-FA35091B5A34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0170DF69-3175-4127-A95E-6B1FB777A288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0170DF69-3175-4127-A95E-6B1FB777A288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0170DF69-3175-4127-A95E-6B1FB777A288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0170DF69-3175-4127-A95E-6B1FB777A288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B720A4-ED70-42FB-9A46-FA35091B5A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B720A4-ED70-42FB-9A46-FA35091B5A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B720A4-ED70-42FB-9A46-FA35091B5A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B720A4-ED70-42FB-9A46-FA35091B5A34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B64A2E7-C866-4506-BA62-527E27F6BDAF}
+	EndGlobalSection
+EndGlobal

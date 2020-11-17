@@ -1,0 +1,6 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\bin\Debug\PhoneNumbers.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\bin\Debug\PhoneNumbers.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\obj\Debug\PhoneNumbers.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\obj\Debug\PhoneNumbers.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\obj\Debug\PhoneNumbers.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\PhoneNumbers\obj\Debug\PhoneNumbers.pdb

@@ -1,0 +1,10 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\bin\Debug\UI.exe.config
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\bin\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\bin\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\bin\Debug\PhoneNumbers.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\bin\Debug\PhoneNumbers.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\obj\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab5\lab5\UI\obj\Debug\UI.pdb
