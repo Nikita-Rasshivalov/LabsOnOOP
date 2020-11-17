@@ -1,0 +1,10 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\bin\Debug\UI.exe.config
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\bin\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\bin\Debug\UI.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\bin\Debug\WorkWithStrings.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\bin\Debug\WorkWithStrings.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\obj\Debug\UI.csproj.CopyComplete
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\obj\Debug\UI.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab4\WorkWithStrings\Strings\obj\Debug\UI.pdb
