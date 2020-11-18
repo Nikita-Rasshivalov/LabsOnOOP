@@ -4,8 +4,16 @@ using System.Text.RegularExpressions;
 
 namespace WorkWithStrings
 {
+    /// <summary>
+    /// String handling class
+    /// </summary>
     public static class Words
     {
+        /// <summary>
+        /// Method of removing duplicate words
+        /// </summary>
+        /// <param name="myString">String of input</param>
+        /// <returns>String without duplicate words</returns>
         public static string DelRepeatedWord(string myString)
         {
             string symbols = Regex.Replace(myString, "[^!.]", "");
@@ -31,6 +39,12 @@ namespace WorkWithStrings
             return newString;
         }
 
+
+        /// <summary>
+        /// Method of checking duplicate words
+        /// </summary>
+        /// <param name="words">String of input</param>
+        /// <returns>Flag(is or isnt duplicate words)</returns>
         public static string CheckRepeatWords(string[] words)
         {
             string newString = "";
@@ -60,12 +74,20 @@ namespace WorkWithStrings
                 if (words[i] != "")
                 {
                     newString += words[i] + " ";
+                    
+
                 }
 
             }
             return newString;
         }
 
+
+        /// <summary>
+        /// Check internet adress
+        /// </summary>
+        /// <param name="sentences">Array of sentences</param>
+        /// <returns>Flag(suitable sentence or not)</returns>
         public static bool CheckAdressAndDate(string[] sentences)
         {
             bool flag = true;// Check correсting input
@@ -79,7 +101,11 @@ namespace WorkWithStrings
             }
             return flag;
         }
-
+        /// <summary>
+        ///  String processing method
+        /// </summary>
+        /// <param name="myString">string of input</param>
+        /// <returns>Suitable  string</returns>
         public static StringBuilder GetString(string myString)
         {
             string[] separator = { ". " };

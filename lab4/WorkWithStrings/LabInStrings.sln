@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Strings\UI.csproj", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkWithStrings", "WorkWithStrings\WorkWithStrings.csproj", "{EFDD3FC0-F861-4AA5-B075-914B0A7445B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringTests", "StringTests\StringTests.csproj", "{DC43E240-2865-434B-96A6-79912EB01E83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EFDD3FC0-F861-4AA5-B075-914B0A7445B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFDD3FC0-F861-4AA5-B075-914B0A7445B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFDD3FC0-F861-4AA5-B075-914B0A7445B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC43E240-2865-434B-96A6-79912EB01E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC43E240-2865-434B-96A6-79912EB01E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC43E240-2865-434B-96A6-79912EB01E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC43E240-2865-434B-96A6-79912EB01E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,8 +5,15 @@ using System.Text;
 
 namespace Strings
 {
+    /// <summary>
+    /// User inerface
+    /// </summary>
     class UI
     {
+        /// <summary>
+        /// Point of entry
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int exit = 3;
@@ -42,6 +49,7 @@ namespace Strings
                         if (result != null)
                         {
                             Console.WriteLine(result);
+                           
                             
                         }
                         else
@@ -56,6 +64,11 @@ namespace Strings
                 }
             }
         }
+
+        /// <summary>
+        /// Method of getting choice
+        /// </summary>
+        /// <returns>Your choice</returns>
         static int GetChoice()
         {
             int choice;
