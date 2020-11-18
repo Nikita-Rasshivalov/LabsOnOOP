@@ -31,7 +31,7 @@ namespace WorkWithStrings
                 foreach (var sentence in sentences)
                 {
                     string[] words = sentence.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    newString += CheckRepeatWords(words) + symbols[numSymbol];
+                    newString += CheckRepeatWords(words) + symbols[numSymbol]+ " ";
                     numSymbol++;
 
                 }
@@ -48,6 +48,7 @@ namespace WorkWithStrings
         public static string CheckRepeatWords(string[] words)
         {
             string newString = "";
+            int counter = words.Length;
             for (int i = 0; i < words.Length - 1; i++)
             {
                 bool flag = true;
@@ -66,22 +67,32 @@ namespace WorkWithStrings
                             flag = false;
                         }
                     }
+                    if (compareWords == 0 && words[i] != "")
+                    {
+                        counter--;
+                    }
                     j++;
                 }
             }
+            string[] correctWords = new string[counter];
+            int k = 0;
             for (int i = 0; i < words.Length; i++)
             {
                 if (words[i] != "")
                 {
-                    newString += words[i] + " ";
-                    
-
+                    correctWords[k] = words[i];
+                    k++;
                 }
 
             }
+            for (int i = 0; i < correctWords.Length; i++)
+            {
+                newString += correctWords[i];
+                if (i != correctWords.Length - 1)
+                    newString += " ";
+            }
             return newString;
         }
-
 
         /// <summary>
         /// Check internet adress
@@ -111,7 +122,6 @@ namespace WorkWithStrings
             string[] separator = { ". " };
             myString += " ";
             string[] sentences = myString.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-            Console.WriteLine(sentences.Length);
             bool flag = CheckAdressAndDate(sentences);
             StringBuilder newString = null;
 
