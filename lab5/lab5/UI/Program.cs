@@ -4,8 +4,15 @@ using System.Collections.Generic;
 
 namespace UI
 {
+ /// <summary>
+ /// User interface
+ /// </summary>
     class Program
     {
+        /// <summary>
+        /// Point of entery
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             List<string> mobilNumbers = new List<string>();
@@ -31,6 +38,11 @@ namespace UI
                 }
             }
         }
+
+        /// <summary>
+        /// Get choice
+        /// </summary>
+        /// <returns>Your choice</returns>
         public static int GetChoice()
         {
             int choice;

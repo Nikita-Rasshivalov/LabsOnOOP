@@ -4,8 +4,15 @@ using PhoneNumbers;
 
 namespace UI
 {
+    /// <summary>
+    /// Class for work with mobilenumbers
+    /// </summary>
     public static class WorkWithNumbers
     {
+        /// <summary>
+        /// Method of entering mobile numbers
+        /// </summary>
+        /// <param name="mobileNumbers">Mobile numbers</param>
         public static void EnterNumbers(List<string> mobileNumbers)
         {
             Console.WriteLine("Сколько добавить номеров?");
@@ -21,6 +28,10 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Method of showing mobile numbers
+        /// </summary>
+        /// <param name="mobileNumbers">Mobile numbers</param>
         public static void ShowNumbers(List<string> mobileNumbers)
         {
             List<string> fullNumbers = new List<string>();
