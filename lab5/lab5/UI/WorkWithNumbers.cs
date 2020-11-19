@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using PhoneNumbers;
 
 namespace UI
@@ -70,6 +71,19 @@ namespace UI
             }
             else
                 Console.WriteLine("Пусто");
+        }
+        /// <summary>
+        /// Parse string
+        /// </summary>
+        /// <param name="myString">String</param>
+        /// <returns>String with symbols</returns>
+        public static string ParseString(string myString)
+        {
+            
+            string symbolsForm = Regex.Replace(myString, "[A-Za-zА-Яа-я0-9]", "");
+            Console.WriteLine($"Символы: {symbolsForm}");
+            return symbolsForm;
+
         }
     }
 }

@@ -17,7 +17,7 @@ namespace UI
         {
             List<string> mobilNumbers = new List<string>();
 
-            int exit = 3;
+            int exit = 4;
             int choice = 0;
             while (choice != exit)
             {
@@ -30,6 +30,11 @@ namespace UI
                         break;
                     case 2:
                         WorkWithNumbers.ShowNumbers(mobilNumbers);
+                        break;
+                    case 3:
+                        Console.WriteLine("Введите строку");
+                        string initialString = Console.ReadLine();
+                        WorkWithNumbers.ParseString(initialString);
                         break;
 
                     default:
@@ -47,7 +52,7 @@ namespace UI
         {
             int choice;
             Console.WriteLine("Выберите:\n1.Добавить номера\n" +
-                "2.Вывод отсортированных номеров\n3.Выход");
+                "2.Вывод отсортированных номеров\n3.Вывод символов\n4.Выход");
             string input = Console.ReadLine();
             int.TryParse(input, out choice);
             return choice;
