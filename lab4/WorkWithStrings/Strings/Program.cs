@@ -49,8 +49,7 @@ namespace Strings
                         if (result != null)
                         {
                             Console.WriteLine(result);
-                           
-                            
+                                                   
                         }
                         else
                         {
