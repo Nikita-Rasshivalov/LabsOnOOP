@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hrewh2WE58y0Y1buRdjPF/VB90aKladtI1K0oxYMDhPX66qVOUuds0e1ybp22ALuPIays4DMRTRG8Zn6gsidnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nikit\\Desktop\\OOP\\LabsC#\\lab6\\FishingShop\\ShopFishing\\ShopFishing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nikit\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\nikit\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
