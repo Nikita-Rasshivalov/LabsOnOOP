@@ -22,23 +22,22 @@ namespace ShopFishing
     {
         public class InfoAboutPurchase
         {
-
             public FishingType FishingType { get; set; }
             public DateTime Date { get; set; }
             public FishingThings ThingType { get; set; }
 
-            public InfoAboutPurchase(FishingThings thingType, DateTime date)
+            public InfoAboutPurchase(FishingThings thingType, DateTime date, FishingType fishingtype)
             {
                 Date = date;
                 ThingType = thingType;
-            }
+                FishingType = fishingtype;
 
+            }
             public InfoAboutPurchase()
             {
 
             }
         }
-
         public List<InfoAboutPurchase> Purchases;
         public DateTime Date { get; set; }
         public DayInfo(DateTime date, List<InfoAboutPurchase> purchases)
@@ -50,7 +49,6 @@ namespace ShopFishing
         public int Spinning { get { return GetNumber(FishingThings.Spinning); } }
         public int Fider { get { return GetNumber(FishingThings.Fider); } }
         public int Picker { get { return GetNumber(FishingThings.Picker); } }
-
         private int GetNumber(FishingThings type)
         {
             int number = 0;
@@ -61,9 +59,6 @@ namespace ShopFishing
             }
             return number;
         }
-
-
-
         public static void AddThings(List<DayInfo> days, InfoAboutPurchase purchase)
         {
             bool dayExistense = false;
@@ -79,9 +74,6 @@ namespace ShopFishing
                 days.Add(new DayInfo(purchase.Date, new List<InfoAboutPurchase>() { purchase }));
         }
 
-
-
-
         public static double GetAverage(List<DayInfo> days, FishingThings type)
         {
             double typeNumber = 0;
@@ -95,9 +87,5 @@ namespace ShopFishing
             }
             return typeNumber / days.Count;
         }
-
-
-
-
     }
 }
