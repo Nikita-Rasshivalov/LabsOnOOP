@@ -40,11 +40,11 @@ namespace ShopFishing
         }
 
         public List<InfoAboutPurchase> Purchases;
-        public DateTime Date;
+        public DateTime Date { get; set; }
         public DayInfo(DateTime date, List<InfoAboutPurchase> purchases)
         {
-            this.Date = date;
-            this.Purchases = purchases;
+            Date = date;
+            Purchases = purchases;
         }
         public int FishingRodNumber { get { return GetNumber(FishingThings.FishingRod); } }
         public int Spinning { get { return GetNumber(FishingThings.Spinning); } }
@@ -60,6 +60,40 @@ namespace ShopFishing
                     number++;
             }
             return number;
+        }
+
+
+
+        public static void AddThings(List<DayInfo> days, InfoAboutPurchase purchase)
+        {
+            bool dayExistense = false;
+            foreach (var day in days)
+            {
+                if (day.Date.Date == purchase.Date.Date)
+                {
+                    day.Purchases.Add(purchase);
+                    dayExistense = true;
+                }
+            }
+            if (!dayExistense)
+                days.Add(new DayInfo(purchase.Date, new List<InfoAboutPurchase>() { purchase }));
+        }
+
+
+
+
+        public static double GetAverage(List<DayInfo> days, FishingThings type)
+        {
+            double typeNumber = 0;
+            foreach (var day in days)
+            {
+                foreach (var purchase in day.Purchases)
+                {
+                    if (purchase.ThingType == type)
+                        typeNumber++;
+                }
+            }
+            return typeNumber / days.Count;
         }
 
 
