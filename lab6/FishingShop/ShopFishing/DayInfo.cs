@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace ShopFishing
 {
+
+    /// <summary>
+    /// The enumeration representing fishing things
+    /// </summary>
     public enum FishingThings
     {
         FishingRod,
@@ -11,44 +15,99 @@ namespace ShopFishing
         Picker
     }
 
+    /// <summary>
+    ///The enumeration representing type of fishing
+    /// </summary>
     public enum FishingType
     {
         Summer,
-        Winter
+        Winter,
+        Autumn,
+        Spring
+
     }
 
-
+    /// <summary>
+    /// Information of the day
+    /// </summary>
     public class DayInfo
     {
+        /// <summary>
+        /// Information about purchases
+        /// </summary>
         public class InfoAboutPurchase
         {
+            /// <summary>
+            /// FishingType
+            /// </summary>
             public FishingType FishingType { get; set; }
+            /// <summary>
+            /// Date
+            /// </summary>
             public DateTime Date { get; set; }
-            public FishingThings ThingType { get; set; }
+            /// <summary>
+            /// ThingType
+            /// </summary>
 
-            public InfoAboutPurchase(FishingThings thingType, DateTime date, FishingType fishingtype)
+            public FishingThings ThingType { get; set; }
+            /// <summary>
+            /// Price
+            /// </summary>
+            public int Price { get; set; }
+
+            /// <summary>
+            /// Create  an instance of the purchases
+            /// </summary>
+            /// <param name="thingType">thingType</param>
+            /// <param name="date">date</param>
+            /// <param name="fishingtype"fishingtype></param>
+            /// <param name="price">price</param>
+            public InfoAboutPurchase(FishingThings thingType, DateTime date, FishingType fishingtype, int price)
             {
                 Date = date;
                 ThingType = thingType;
                 FishingType = fishingtype;
-
+                Price = price;
             }
+
+            /// <summary>
+            /// Creates an instance of the purchases
+            /// </summary>
             public InfoAboutPurchase()
             {
 
             }
         }
+
+        /// <summary>
+        /// Purchases
+        /// </summary>
         public List<InfoAboutPurchase> Purchases;
+        /// <summary>
+        /// Date
+        /// </summary>
         public DateTime Date { get; set; }
+        /// <summary>
+        /// Creates an instance of the DayInfo class
+        /// </summary>
+        /// <param name="date">date</param>
+        /// <param name="purchases">purchases</param>
         public DayInfo(DateTime date, List<InfoAboutPurchase> purchases)
         {
             Date = date;
             Purchases = purchases;
         }
-        public int FishingRodNumber { get { return GetNumber(FishingThings.FishingRod); } }
-        public int Spinning { get { return GetNumber(FishingThings.Spinning); } }
-        public int Fider { get { return GetNumber(FishingThings.Fider); } }
-        public int Picker { get { return GetNumber(FishingThings.Picker); } }
+        //  public int FishingRodNumber { get { return GetNumber(FishingThings.FishingRod); } }
+        //  public int Spinning { get { return GetNumber(FishingThings.Spinning); } }
+        //  public int Fider { get { return GetNumber(FishingThings.Fider); } }
+        //  public int Picker { get { return GetNumber(FishingThings.Picker); } }
+
+
+        /// <summary>
+        /// Method of getting quantity fishing tackle
+        /// </summary>
+        /// <param name="type">Type of fishing</param>
+        /// <returns>quantity</returns>
         private int GetNumber(FishingThings type)
         {
             int number = 0;
@@ -59,6 +118,12 @@ namespace ShopFishing
             }
             return number;
         }
+
+        /// <summary>
+        /// Add purchase
+        /// </summary>
+        /// <param name="days">Days</param>
+        /// <param name="purchase">Purchase</param>
         public static void AddThings(List<DayInfo> days, InfoAboutPurchase purchase)
         {
             bool dayExistense = false;
@@ -73,19 +138,49 @@ namespace ShopFishing
             if (!dayExistense)
                 days.Add(new DayInfo(purchase.Date, new List<InfoAboutPurchase>() { purchase }));
         }
-
-        public static double GetAverage(List<DayInfo> days, FishingThings type)
+        /// <summary>
+        /// Quantity
+        /// </summary>
+        /// <param name="days">Days</param>
+        /// <param name="type">Type of fishing</param>
+        /// <returns>Quantity</returns>
+        public static double GetQuantityty(List<DayInfo> days, FishingType type)
         {
             double typeNumber = 0;
             foreach (var day in days)
             {
                 foreach (var purchase in day.Purchases)
                 {
-                    if (purchase.ThingType == type)
+                    if (purchase.FishingType == type)
                         typeNumber++;
                 }
             }
-            return typeNumber / days.Count;
+            return typeNumber;
+        }
+
+        /// <summary>
+        /// Calc average
+        /// </summary>
+        /// <param name="days">Days</param>
+        /// <returns>average</returns>
+
+        public static double GetAverage(List<DayInfo> days)
+        {
+            double sum = 0;
+            int countPrice = 0;
+            foreach (var day in days)
+            {
+                foreach (var pur in day.Purchases)
+                {
+                    sum += pur.Price;
+                    countPrice++;
+                }
+
+            }
+            double average = sum / countPrice;
+
+            return average;
+
         }
     }
 }

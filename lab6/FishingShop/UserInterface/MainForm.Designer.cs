@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ShowButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -61,33 +61,34 @@
             this.label1.Size = new System.Drawing.Size(503, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "Fishing Shop Raxana";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // ShowButton
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.OliveDrab;
-            this.button1.Location = new System.Drawing.Point(312, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(306, 56);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Edit Information";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ShowButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ShowButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ShowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ShowButton.ForeColor = System.Drawing.Color.OliveDrab;
+            this.ShowButton.Location = new System.Drawing.Point(312, 162);
+            this.ShowButton.Name = "ShowButton";
+            this.ShowButton.Size = new System.Drawing.Size(306, 56);
+            this.ShowButton.TabIndex = 2;
+            this.ShowButton.Text = "Show Information";
+            this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // button2
+            // EditButton
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.OliveDrab;
-            this.button2.Location = new System.Drawing.Point(312, 224);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(306, 56);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Show Information";
-            this.button2.UseVisualStyleBackColor = true;
+            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.EditButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditButton.ForeColor = System.Drawing.Color.OliveDrab;
+            this.EditButton.Location = new System.Drawing.Point(312, 224);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(306, 56);
+            this.EditButton.TabIndex = 3;
+            this.EditButton.Text = "Edit Information";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click_1);
             // 
             // button3
             // 
@@ -101,6 +102,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Information about period";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -114,6 +116,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Exit";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainForm
             // 
@@ -122,13 +125,17 @@
             this.ClientSize = new System.Drawing.Size(897, 494);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.ShowButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Shop";
+       
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +145,8 @@
 
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ShowButton;
+        private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }
