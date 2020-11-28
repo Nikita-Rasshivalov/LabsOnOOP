@@ -14,10 +14,7 @@ namespace UserInterface
         /// List of purchases
         /// </summary>
         public static List<DayInfo> Purchases;
-        /// <summary>
-        /// List of days
-        /// </summary>
-        public static List<DayInfo> Days { get; set; }
+
         /// <summary>
         /// Creates an instance of the Main class
         /// </summary>
@@ -25,7 +22,7 @@ namespace UserInterface
         {
             InitializeComponent();
             Purchases = new List<DayInfo>();
-            Days = new List<DayInfo>();
+            
         }
         /// <summary>
         /// Open window of adding information

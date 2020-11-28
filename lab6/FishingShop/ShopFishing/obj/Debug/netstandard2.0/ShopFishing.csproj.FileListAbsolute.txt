@@ -1,0 +1,9 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\bin\Debug\netstandard2.0\ShopFishing.deps.json
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\bin\Debug\netstandard2.0\ShopFishing.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\bin\Debug\netstandard2.0\ShopFishing.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.AssemblyInfoInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.AssemblyInfo.cs
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab6\FishingShop\ShopFishing\obj\Debug\netstandard2.0\ShopFishing.pdb

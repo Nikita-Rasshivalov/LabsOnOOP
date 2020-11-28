@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ShopFishing
 {
@@ -26,6 +27,7 @@ namespace ShopFishing
         Spring
 
     }
+
 
     /// <summary>
     /// Information of the day
@@ -97,28 +99,51 @@ namespace ShopFishing
             Date = date;
             Purchases = purchases;
         }
-        //  public int FishingRodNumber { get { return GetNumber(FishingThings.FishingRod); } }
-        //  public int Spinning { get { return GetNumber(FishingThings.Spinning); } }
-        //  public int Fider { get { return GetNumber(FishingThings.Fider); } }
-        //  public int Picker { get { return GetNumber(FishingThings.Picker); } }
-
 
         /// <summary>
         /// Method of getting quantity fishing tackle
         /// </summary>
         /// <param name="type">Type of fishing</param>
         /// <returns>quantity</returns>
-        private int GetNumber(FishingThings type)
+        private static int GetNumber(List<DayInfo> periodDays, FishingThings type)
         {
+
             int number = 0;
-            foreach (var purchase in Purchases)
+            foreach (var day in periodDays)
             {
-                if (purchase.ThingType == type)
-                    number++;
+                foreach (var purchase in day.Purchases)
+                {
+                    if (purchase.ThingType == type)
+                        number++;
+                }
             }
             return number;
         }
 
+        public static string GetPopularTackle(List<DayInfo> periodDays)
+        {
+            int FishingRodCount = GetNumber(periodDays, FishingThings.FishingRod);
+            int SpinningCount = GetNumber(periodDays, FishingThings.Spinning);
+            int PickerCount = GetNumber(periodDays, FishingThings.Picker);
+            int FiderCount = GetNumber(periodDays, FishingThings.Fider);
+            Dictionary<FishingThings, int> purchases = new Dictionary<FishingThings, int>(4);
+            purchases.Add(FishingThings.FishingRod, FishingRodCount);
+            purchases.Add(FishingThings.Spinning, SpinningCount);
+            purchases.Add(FishingThings.Picker, PickerCount);
+            purchases.Add(FishingThings.Fider, FiderCount);
+            var maxValue = purchases.Max(i => i.Value);
+            List<FishingThings> maxKeys = purchases.Where(i => i.Value == maxValue).Select(i => i.Key).ToList();
+            string result;
+            if (maxKeys.Count != 1)
+            {
+                result = "Not data";
+            }
+            else
+            {
+                result = maxKeys[0].ToString();
+            }
+            return result;
+        }
         /// <summary>
         /// Add purchase
         /// </summary>
