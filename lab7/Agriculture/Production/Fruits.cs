@@ -7,18 +7,10 @@ namespace Production
 
     public class Fruits : InfoAboutProduction
     {
-        enum KindFruits
+        public Fruits()
         {
-            Apple,
-            Apricot,
-            Oranges,
-            Pear,
-            Peach,
-            Tangerines,
-            Mango,
-            Bananas,
-            Lemon,
-            Kiwi
+
+
         }
     }
 }

@@ -6,18 +6,11 @@ namespace Production
 {
     public class Berries : InfoAboutProduction
     {
-        enum KindBerries
+        public override string[] Types { get { return types; } }
+        private string[] types = { "Strawberry", "Raspberry", "Blackberry", "Bluberry", "Wildstrawberry", "Lingonberries", "Grapes", "Watermelon", "Melon", "Barberry" };
+        public Berries()
         {
-            Strawberry,
-            Raspberry,
-            Blackberry,
-            Bluberry,
-            Wildstrawberry,
-            Lingonberries,
-            Grapes,
-            Watermelon,
-            Melon,
-            Barberry
+
         }
     }
 }
