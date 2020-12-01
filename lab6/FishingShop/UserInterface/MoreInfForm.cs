@@ -28,7 +28,11 @@ namespace UserInterface
             this.Close();
         }
 
-
+        /// <summary>
+        ///  Get periods
+        /// </summary>
+        /// <param name="periodDays">periodDays</param>
+        /// <returns>Correct or incorrect period</returns>
         bool GetPeriodDays(List<DayInfo> periodDays)
         {
             bool isCorrectPeriod;
@@ -57,6 +61,12 @@ namespace UserInterface
         }
 
 
+
+        /// <summary>
+        /// Returns information about pereod
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -89,7 +99,7 @@ namespace UserInterface
 
         }
 
-       
+
     }
 }
 

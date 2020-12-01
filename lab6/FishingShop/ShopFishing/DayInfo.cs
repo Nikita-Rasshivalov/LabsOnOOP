@@ -105,7 +105,7 @@ namespace ShopFishing
         /// </summary>
         /// <param name="type">Type of fishing</param>
         /// <returns>quantity</returns>
-        private static int GetNumber(List<DayInfo> periodDays, FishingThings type)
+        public static int GetNumber(List<DayInfo> periodDays, FishingThings type)
         {
 
             int number = 0;

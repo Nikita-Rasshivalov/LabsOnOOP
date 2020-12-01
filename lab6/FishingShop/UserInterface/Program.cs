@@ -6,10 +6,13 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
+    /// <summary>
+    /// User Interface
+    /// </summary>
     static class Program
     {
         /// <summary>
-        /// 
+        /// Main program
         /// </summary>
         [STAThread]
         static void Main()
