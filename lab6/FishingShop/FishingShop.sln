@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopFishing", "ShopFishing\ShopFishing.csproj", "{ECCB70F7-B0DE-43B1-B869-E743770CE079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestShop", "TestShop\TestShop.csproj", "{5EDE868F-4138-431E-9347-070510B9519E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{6810EF96-0214-40D1-BF3A-13B894E46C7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{ECCB70F7-B0DE-43B1-B869-E743770CE079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECCB70F7-B0DE-43B1-B869-E743770CE079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECCB70F7-B0DE-43B1-B869-E743770CE079}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5EDE868F-4138-431E-9347-070510B9519E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EDE868F-4138-431E-9347-070510B9519E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EDE868F-4138-431E-9347-070510B9519E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EDE868F-4138-431E-9347-070510B9519E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6810EF96-0214-40D1-BF3A-13B894E46C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6810EF96-0214-40D1-BF3A-13B894E46C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6810EF96-0214-40D1-BF3A-13B894E46C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6810EF96-0214-40D1-BF3A-13B894E46C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
