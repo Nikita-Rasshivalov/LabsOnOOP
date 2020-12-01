@@ -1,16 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Text;
 
 namespace Production
 {
-  
+    enum KindTypes
+    {
+        Fruits,
+        Vegetables,
+        Berries
+    }
     public abstract class InfoAboutProduction
     {
-        List<InfoAboutProduction> Productins = new List<InfoAboutProduction>();
-        public int PriceOnKillo { get; set; }
+        public int PriceOnKillo { get { return GetPrice(); } }
         public bool Technology { get; set; }
         public abstract string[] Types { get; }
+
+        public abstract int GetPrice();
+
+  
+
+
+        
+        
+        
+
+
 
     }
 }

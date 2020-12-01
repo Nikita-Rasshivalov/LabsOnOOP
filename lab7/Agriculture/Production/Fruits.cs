@@ -7,6 +7,10 @@ namespace Production
 
     public class Fruits : InfoAboutProduction
     {
+  
+        
+          
+        
         public Fruits()
         {
 
