@@ -5,6 +5,46 @@ using System.Text;
 
 namespace Production
 {
+    enum KindOfVegetables
+    {
+        Carrots,
+        Potatos,
+        Tomatos,
+        Peppers,
+        Squashs,
+        Beets,
+        Cabbages,
+        Cucumbers,
+        Pumpkins,
+        Spinachs
+    }
+    enum KindOfFruits
+    {
+        Apples,
+        Apricots,
+        Kiwis,
+        Lemons,
+        Oranges,
+        Pears,
+        Peachs,
+        Tangerines,
+        Mandarines,
+        Banans
+    }
+    enum KindOfBerries
+    {
+       Bluberries,
+       Strawberries,
+       Grapes,
+       Blackberries,
+       Barberries,
+       Watermelons,
+       Melons,
+       Cranberries,
+       Raspberries,
+       Lingonberries
+    }
+
     enum KindTypes
     {
         Fruits,
