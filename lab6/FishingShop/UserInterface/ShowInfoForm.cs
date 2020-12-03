@@ -44,8 +44,10 @@ namespace UserInterface
             
             foreach (DataGridViewColumn column in dataGridView1.Columns)
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-          
-            var column1 = new DataGridViewColumn();
+
+            
+
+      var column1 = new DataGridViewColumn();
             column1.HeaderText = "Kind"; 
             column1.Width = 100; 
             column1.ReadOnly = true; 
@@ -74,7 +76,12 @@ namespace UserInterface
             dataGridView1.Columns.Add(column3);
             dataGridView1.Columns.Add(column4);
 
-            dataGridView1.AllowUserToAddRows = false; 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[3].SortMode = DataGridViewColumnSortMode.Automatic;
+            
 
 
             foreach (var day in MainForm.Purchases)

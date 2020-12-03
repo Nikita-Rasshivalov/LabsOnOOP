@@ -32,7 +32,7 @@ namespace UserInterface
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormAdd add = new FormAdd();
-            add.Show();
+            add.ShowDialog();
 
         }
 
@@ -44,7 +44,7 @@ namespace UserInterface
         private void EditButton_Click(object sender, EventArgs e)
         {
             ShowInfoForm show = new ShowInfoForm();
-            show.Show();
+            show.ShowDialog();
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace UserInterface
         private void EditButton_Click_1(object sender, EventArgs e)
         {
             EditForm edit = new EditForm();
-            edit.Show();
+            edit.ShowDialog();
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace UserInterface
         private void button3_Click(object sender, EventArgs e)
         {
             InformationAboutPeriodForm info = new InformationAboutPeriodForm();
-            info.Show();
+            info.ShowDialog();
         }
 
 

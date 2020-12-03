@@ -86,7 +86,7 @@
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(306, 56);
             this.EditButton.TabIndex = 3;
-            this.EditButton.Text = "Edit Information";
+            this.EditButton.Text = "Remove";
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click_1);
             // 

@@ -60,7 +60,6 @@
             this.clearDayLabel.Size = new System.Drawing.Size(277, 25);
             this.clearDayLabel.TabIndex = 10;
             this.clearDayLabel.Text = "Clear information of the day";
-
             // 
             // SelectedDate
             // 
@@ -125,7 +124,7 @@
             this.MaximizeBox = false;
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit";
+            this.Text = "Remove Information";
             this.ResumeLayout(false);
             this.PerformLayout();
 
