@@ -59,14 +59,7 @@ namespace Production
 
         public abstract int GetPrice();
 
-  
-
-
-        
-        
-        
-
-
+        // метод стрин для переопределения вида
 
     }
 }
