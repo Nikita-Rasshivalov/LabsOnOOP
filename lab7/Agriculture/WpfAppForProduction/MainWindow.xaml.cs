@@ -21,7 +21,7 @@ namespace WpfAppForProduction
     /// </summary>
     public partial class MainWindow : Window
     {
-       public static List<InfoAboutProduction> Products = new List<InfoAboutProduction>();
+        public static List<InfoAboutProduction> Products = new List<InfoAboutProduction>();
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +43,17 @@ namespace WpfAppForProduction
         {
             ProductsWindow prod = new ProductsWindow();
             prod.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            EditWindow edit = new EditWindow();
+            edit.ShowDialog();
         }
     }
 }

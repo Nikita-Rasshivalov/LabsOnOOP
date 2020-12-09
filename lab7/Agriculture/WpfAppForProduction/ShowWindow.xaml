@@ -5,21 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppForProduction"
         mc:Ignorable="d"
-        Title="ShowWindow" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Information" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
     <Grid>
         <Label Content="Display the number of items of names for each type of non-ecological product" HorizontalAlignment="Left" Height="34" Margin="10,33,0,0" VerticalAlignment="Top" Width="538" FontWeight="Bold" FontSize="14"/>
-        <Label x:Name="LabelTechCount" Content="Fruits" HorizontalAlignment="Left" Height="31" Margin="19,88,0,0" VerticalAlignment="Top" Width="69"/>
-        <Label Content="Display the average cost of 1 kg of ecological products for a given type of plant" HorizontalAlignment="Left" Height="39" Margin="10,228,0,0" VerticalAlignment="Top" Width="538" FontWeight="Bold" FontSize="14"/>
-        <Label x:Name="PriceEco" Content="" HorizontalAlignment="Left" Margin="614,228,0,0" VerticalAlignment="Top" Height="27" Width="80"/>
-        <Label Content="Display the average cost of 1 kg of non-ecological products for a given type of plant" HorizontalAlignment="Left" Height="39" Margin="10,267,0,0" VerticalAlignment="Top" Width="568" FontWeight="Bold" FontSize="14"/>
-        <Label x:Name="PriceNonEco" Content="" HorizontalAlignment="Left" Margin="614,269,0,0" VerticalAlignment="Top" Height="27" Width="80"/>
-        <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="10,379,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click"/>
-        <Button Content="Show" HorizontalAlignment="Left" Height="31" Margin="690,379,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_1"/>
-        <Label x:Name="LabelTechCount_Copy" Content="Berries" HorizontalAlignment="Left" Height="31" Margin="241,88,0,0" VerticalAlignment="Top" Width="69"/>
-        <Label x:Name="LabelTechCount_Copy1" Content="Vegetables" HorizontalAlignment="Left" Height="31" Margin="479,88,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="LabelTechCount" Content="Fruits" HorizontalAlignment="Left" Height="31" Margin="19,88,0,0" VerticalAlignment="Top" Width="69" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Display the average cost of 1 kg of ecological products for a given type of plant" HorizontalAlignment="Left" Height="39" Margin="10,273,0,0" VerticalAlignment="Top" Width="538" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="PriceEco" Content="" HorizontalAlignment="Left" Margin="602,273,0,0" VerticalAlignment="Top" Height="27" Width="80" RenderTransformOrigin="0.6,1.63"/>
+        <Label Content="Display the average cost of 1 kg of non-ecological products for a given type of plant" HorizontalAlignment="Left" Height="39" Margin="10,317,0,0" VerticalAlignment="Top" Width="568" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="PriceNonEco" Content="" HorizontalAlignment="Left" Margin="602,317,0,0" VerticalAlignment="Top" Height="27" Width="80"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="10,379,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click" Background="#FFF07979" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Show" HorizontalAlignment="Left" Height="31" Margin="690,379,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_1" Background="#FFF07979" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="LabelTechCount_Copy" Content="Berries" HorizontalAlignment="Left" Height="31" Margin="241,88,0,0" VerticalAlignment="Top" Width="69" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="LabelTechCount_Copy1" Content="Vegetables" HorizontalAlignment="Left" Height="31" Margin="479,88,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14"/>
         <Label x:Name="CountFruits" Content="" HorizontalAlignment="Left" Height="26" Margin="19,119,0,0" VerticalAlignment="Top" Width="58"/>
         <Label x:Name="CountBerries" Content="" HorizontalAlignment="Left" Height="26" Margin="241,119,0,0" VerticalAlignment="Top" Width="58"/>
         <Label x:Name="CountVegetables" Content="" HorizontalAlignment="Left" Height="26" Margin="479,119,0,0" VerticalAlignment="Top" Width="58"/>
+        <ComboBox x:Name="Kindbox" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
 
     </Grid>
 </Window>

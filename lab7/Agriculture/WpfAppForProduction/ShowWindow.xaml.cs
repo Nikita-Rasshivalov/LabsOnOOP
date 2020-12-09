@@ -1,17 +1,7 @@
 ﻿using Production;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace WpfAppForProduction
 {
@@ -45,6 +35,7 @@ namespace WpfAppForProduction
             PriceEco.Content = 0;
             PriceNonEco.Content = 0;
 
+
             int countNonBerries = 0;
             int countNonFruits = 0;
             int countNonVegetables = 0;
@@ -52,20 +43,22 @@ namespace WpfAppForProduction
             {
                 if (prod.Technology == false)
                 {
-                    if (prod.Type == KindTypes.Berries)
+                    if (prod.Type == ProdTypes.Berries)
                     {
                         countNonBerries++;
 
                     }
-                    if (prod.Type == KindTypes.Fruits)
+                    if (prod.Type == ProdTypes.Fruits)
                     {
                         countNonFruits++;
                     }
-                    if (prod.Type == KindTypes.Vegetables)
+                    if (prod.Type == ProdTypes.Vegetables)
                     {
                         countNonVegetables++;
                     }
+
                 }
+              
 
             }
             CountVegetables.Content = countNonVegetables;
@@ -73,8 +66,6 @@ namespace WpfAppForProduction
             CountBerries.Content = countNonBerries;
 
 
-            PriceEco.Content =  ;
-            PriceNonEco.Content = ;
 
         }
 

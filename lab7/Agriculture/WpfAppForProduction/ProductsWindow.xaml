@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppForProduction"
         mc:Ignorable="d"
-        Title="ProductsWindow" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Products" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
     <Grid>
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Margin="10,383,0,0" Height="27" Click="Button_Click"/>
+        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="353" Margin="104,22,89.6,0" VerticalAlignment="Top" Width="600" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Background="#FFB2EEB5" ItemsSource="{Binding YourSource}" 
+                         CanUserResizeColumns="False"
+                         EnableRowVirtualization="False" >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"  />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type of product" Binding="{Binding Path=Type}" Width="150" />
+                <DataGridTextColumn Header="Kind" Binding="{Binding Path=Kind}" Width="150" />
+                <DataGridTextColumn Header="Technology" Binding="{Binding Path=Technology}" Width="170" />
+                <DataGridTextColumn Header="Price on killo" Binding="{Binding Path=PriceOnKillo}" Width="130" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Margin="10,383,0,0" Height="27" Click="Button_Click" Background="#FFF07979" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Window>

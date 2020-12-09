@@ -22,6 +22,7 @@ namespace WpfAppForProduction
         public ProductsWindow()
         {
             InitializeComponent();
+            adding();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -29,6 +30,13 @@ namespace WpfAppForProduction
             Close();
         }
 
-        
+       void adding()
+        {
+            foreach (var prod in MainWindow.Products)
+            {
+                Info Info = new Info(prod.Type,prod.kind,prod.PriceOnKillo,prod.Technology);
+                showTable.Items.Add(Info);
+            }
+        }
     }
 }

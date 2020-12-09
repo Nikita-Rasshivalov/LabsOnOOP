@@ -43,7 +43,6 @@ namespace WpfAppForProduction
             }
             if (ComboBox0.SelectedIndex == 0)
             {
-
                 ComboBox1.Items.Clear();
                 ComboBox1.Items.Add("Bluberries");
                 ComboBox1.Items.Add("Grapes");
@@ -59,7 +58,6 @@ namespace WpfAppForProduction
             if (ComboBox0.SelectedIndex == 2)
             {
                 ComboBox1.Items.Clear();
-                
                 ComboBox1.Items.Add("Carrots");
                 ComboBox1.Items.Add("Potatos");
                 ComboBox1.Items.Add("Peppers");
@@ -84,7 +82,7 @@ namespace WpfAppForProduction
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int price;
-            KindTypes type;
+            ProdTypes type;
             bool technology;
             Enum.TryParse(ComboBox0.Text, out type);
             int.TryParse(PriceBox.Text, out price);
@@ -92,7 +90,7 @@ namespace WpfAppForProduction
 
             PriceBox.Text = "";
             InfoAboutProduction product = null;
-            if (ComboBox2.SelectedIndex==0)
+            if (ComboBox2.SelectedIndex == 0)
             {
                 technology = true;
             }
@@ -102,33 +100,33 @@ namespace WpfAppForProduction
             }
             switch (type)
             {
-                case KindTypes.Fruits:
-                    product = new Berries(price,kind,technology);
-                    break;
-                case KindTypes.Vegetables:
+                case ProdTypes.Fruits:
                     product = new Fruits(price, kind, technology);
                     break;
-                case KindTypes.Berries:
+                case ProdTypes.Vegetables:
                     product = new Vegetables(price, kind, technology);
+                    break;
+                case ProdTypes.Berries:
+                    product = new Berries(price, kind, technology);
                     break;
                 default:
                     break;
 
             }
-            if (price == 0 )
+            if (price == 0)
             {
-                MessageBox.Show("Product wasn't added, enter price.");
+                MessageBox.Show("Product wasn't added, enter price.", "Information");
             }
             else
             {
                 MainWindow.Products.Add(product);
-                MessageBox.Show("Product was added");
+                MessageBox.Show("Product was added","Information");
             }
-                ComboBox0.SelectedIndex = 0;
-                ComboBox1.SelectedIndex = 0;
-                ComboBox2.SelectedIndex = 0; 
+            ComboBox0.SelectedIndex = 0;
+            ComboBox1.SelectedIndex = 0;
+            ComboBox2.SelectedIndex = 0;
         }
 
-        
+
     }
 }

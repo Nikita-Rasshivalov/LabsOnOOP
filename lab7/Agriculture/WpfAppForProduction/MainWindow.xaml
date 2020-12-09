@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppForProduction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Product Shop" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
     <Grid>
-        <Button Content="Add production" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="274,59,0,0" Height="47" Click="Button_Click" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Show Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="274,183,0,0" Height="47" Click="ButtonShow_Click" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Show products" HorizontalAlignment="Left" Height="43" Margin="274,123,0,0" VerticalAlignment="Top" Width="221" FontWeight="Bold" FontSize="14" Click="Button_Click_1"/>
+        <Button Content="Add production" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="274,59,0,0" Height="47" Click="Button_Click" FontWeight="Bold" FontSize="14" Background="#FFF07979"/>
+        <Button Content="Show Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="274,183,0,0" Height="47" Click="ButtonShow_Click" FontWeight="Bold" FontSize="14" Background="#FFF07979"/>
+        <Button Content="Show products" HorizontalAlignment="Left" Height="43" Margin="274,123,0,0" VerticalAlignment="Top" Width="221" FontWeight="Bold" FontSize="14" Click="Button_Click_1" Background="#FFF07979"/>
+        <Button Content="Edit information" HorizontalAlignment="Left" Margin="274,249,0,0" VerticalAlignment="Top" Width="221" Height="47" Background="#FFF07979" FontWeight="Bold" FontSize="14" Click="Button_Click_3"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Height="47" Margin="274,314,0,0" VerticalAlignment="Top" Width="221" Background="#FFF07979" Click="Button_Click_2" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Window>

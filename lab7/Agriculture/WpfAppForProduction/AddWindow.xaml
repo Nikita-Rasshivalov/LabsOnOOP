@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppForProduction"
         mc:Ignorable="d"
-        Title="AddWindow" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Add Production" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
     <Grid>
         <Label Content="Choose type of production" HorizontalAlignment="Left" Height="32" Margin="26,46,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
         <ComboBox x:Name="ComboBox0" HorizontalAlignment="Left" Margin="26,83,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="ComboBox_SelectionChanged">
@@ -15,8 +15,8 @@
             <ComboBoxItem Content="Vegetables" HorizontalAlignment="Left" Width="167.2"/>
 
         </ComboBox>
-        <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="10,379,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="31" Margin="694,379,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="26,379,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" Background="#FFF07979" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="31" Margin="26,268,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1" Background="#FFF07979" FontSize="14" FontWeight="Bold"/>
         <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Margin="292,83,0,0" VerticalAlignment="Top" Width="195"/>
         <Label Content="Choose kind of production" HorizontalAlignment="Left" Height="32" Margin="292,46,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
         <Label Content="Choose  production" HorizontalAlignment="Left" Height="32" Margin="554,46,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
@@ -24,7 +24,7 @@
             <ComboBoxItem Content="Ecological" HorizontalAlignment="Left" Width="167.2"/>
             <ComboBoxItem Content="Non ecological" HorizontalAlignment="Left" Width="167.2"/>
         </ComboBox>
-        <Label Content="Enter price on kilogram" HorizontalAlignment="Left" Height="32" Margin="14,163,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
-        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="23" Margin="14,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" PreviewTextInput="PriceBox_PreviewTextInput"/>
+        <Label Content="Enter price on kilogram" HorizontalAlignment="Left" Height="32" Margin="26,163,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="23" Margin="26,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" PreviewTextInput="PriceBox_PreviewTextInput"/>
     </Grid>
 </Window>

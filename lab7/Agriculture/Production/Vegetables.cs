@@ -8,9 +8,20 @@ namespace Production
 
     public class Vegetables : InfoAboutProduction
     {
-        private KindTypes type = KindTypes.Vegetables;
-
-        public override KindTypes Type { get { return type; } }
+        /// <summary>
+        /// Product type
+        /// </summary>
+        private ProdTypes type = ProdTypes.Vegetables;
+        /// <summary>
+        /// Redefinit propertie ProdTypes
+        /// </summary>
+        public override ProdTypes Type { get { return type; } }
+        /// <summary>
+        /// Create  an instance of the vegetables
+        /// </summary>
+        /// <param name="firstPrice">firstPrice</param>
+        /// <param name="kind">kind</param>
+        /// <param name="technology">technology</param>
         public Vegetables(double firstPrice, string kind, bool technology) : base(firstPrice, kind, technology)
         {
 

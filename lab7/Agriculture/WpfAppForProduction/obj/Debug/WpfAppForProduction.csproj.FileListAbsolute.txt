@@ -22,3 +22,5 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\bin\Debug
 C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\obj\Debug\WpfAppForProduction.csproj.CopyComplete
 C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\obj\Debug\ProductsWindow.g.cs
 C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\obj\Debug\ProductsWindow.baml
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\obj\Debug\EditWindow.g.cs
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\WpfAppForProduction\obj\Debug\EditWindow.baml
