@@ -1,0 +1,9 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\bin\Debug\netstandard2.0\Production.deps.json
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\bin\Debug\netstandard2.0\Production.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\bin\Debug\netstandard2.0\Production.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.AssemblyInfoInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.AssemblyInfo.cs
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab7\Agriculture\Production\obj\Debug\netstandard2.0\Production.pdb

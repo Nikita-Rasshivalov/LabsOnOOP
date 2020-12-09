@@ -6,10 +6,14 @@ namespace Production
 {
     public class Berries : InfoAboutProduction
     {
-     
-        public Berries()
+        private KindTypes type = KindTypes.Berries;
+        public override KindTypes Type { get { return type; } }
+
+        public Berries(double firstPrice, string kind, bool technology) : base(firstPrice, kind, technology)
         {
 
         }
+
+
     }
 }

@@ -1,65 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
-using System.Text;
+
 
 namespace Production
 {
-    enum KindOfVegetables
-    {
-        Carrots,
-        Potatos,
-        Tomatos,
-        Peppers,
-        Squashs,
-        Beets,
-        Cabbages,
-        Cucumbers,
-        Pumpkins,
-        Spinachs
-    }
-    enum KindOfFruits
-    {
-        Apples,
-        Apricots,
-        Kiwis,
-        Lemons,
-        Oranges,
-        Pears,
-        Peachs,
-        Tangerines,
-        Mandarines,
-        Banans
-    }
-    enum KindOfBerries
-    {
-       Bluberries,
-       Strawberries,
-       Grapes,
-       Blackberries,
-       Barberries,
-       Watermelons,
-       Melons,
-       Cranberries,
-       Raspberries,
-       Lingonberries
-    }
-
-    enum KindTypes
+    public enum KindTypes
     {
         Fruits,
         Vegetables,
         Berries
     }
+
     public abstract class InfoAboutProduction
     {
-        public int PriceOnKillo { get { return GetPrice(); } }
+        public double PriceOnKillo { get { return GetPrice(); } }
+        private double firstPrice;
         public bool Technology { get; set; }
-        public abstract string[] Types { get; }
+        public abstract KindTypes Type { get; }
 
-        public abstract int GetPrice();
+        public string kind;
 
-        // метод стрин для переопределения вида
+        public InfoAboutProduction( double firstPrice, string kind, bool technology)
+        {
+            this.firstPrice = firstPrice;
+            this.kind = kind;
+            Technology = technology;
+        }
+
+        public List<InfoAboutProduction> productions;
+        public double GetPrice()
+        {
+            if (Technology == true)
+            {
+                firstPrice = firstPrice + firstPrice * 0.25;
+            }
+            return firstPrice;
+        }
+
+
+        private static double GetAverage(List<InfoAboutProduction> productions, string kind)
+        {
+            double sum = 0;
+            foreach (var prod in productions)
+            {
+                if (prod.Technology == true && prod.kind == kind)
+                {
+                    sum += prod.firstPrice;
+                }
+            }
+            double average = sum / productions.Count;
+            return average;
+        }
 
     }
 }
