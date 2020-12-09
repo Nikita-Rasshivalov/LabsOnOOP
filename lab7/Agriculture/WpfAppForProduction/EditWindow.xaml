@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfAppForProduction.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppForProduction"
+        mc:Ignorable="d"
+        Title="Edit" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="629*"/>
+            <ColumnDefinition Width="164*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Choose type of product that you want to delete " HorizontalAlignment="Left" Margin="226,20,0,0" VerticalAlignment="Top" Width="330" Height="29" FontWeight="Bold" FontSize="14"/>
+        <ComboBox x:Name="ComboBox" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Fruits" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Vegetables" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Berries" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="38" Margin="316,156,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold" FontSize="14" Background="#FFF07979" Click="DeleteButton_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="36" Margin="10,374,0,0" VerticalAlignment="Top" Width="102" Background="#FFF07979" FontWeight="Bold" FontSize="14" Click="Button_Click"/>
+
+    </Grid>
+</Window>
