@@ -8,23 +8,33 @@ using Production;
 namespace WpfAppForProduction
 {
     /// <summary>
-    /// Логика взаимодействия для AddWindow.xaml
+    /// The class of add products
     /// </summary>
     public partial class AddWindow : Window
     {
-
+        /// <summary>
+        /// Creates an instance of the AddWindow class
+        /// </summary>
         public AddWindow()
         {
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Returns to the main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
+        /// <summary>
+        /// Add information in combobox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ComboBox0.SelectedIndex == 1)
@@ -71,13 +81,21 @@ namespace WpfAppForProduction
             }
 
         }
-
+        /// <summary>
+        /// Check input on numbers
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PriceBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
 
             e.Handled = !(Char.IsDigit(e.Text, 0));
         }
-
+        /// <summary>
+        /// Add products
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -87,8 +105,6 @@ namespace WpfAppForProduction
             Enum.TryParse(ComboBox0.Text, out type);
             int.TryParse(PriceBox.Text, out price);
             string kind = ComboBox1.Text;
-
-            PriceBox.Text = "";
             InfoAboutProduction product = null;
             if (ComboBox2.SelectedIndex == 0)
             {
@@ -98,6 +114,7 @@ namespace WpfAppForProduction
             {
                 technology = false;
             }
+
             switch (type)
             {
                 case ProdTypes.Fruits:
@@ -113,18 +130,20 @@ namespace WpfAppForProduction
                     break;
 
             }
-            if (price == 0)
+            if ( ComboBox1.Text=="" )
             {
-                MessageBox.Show("Product wasn't added, enter price.", "Information");
+                MessageBox.Show("Product wasn't added, enter kind", "Information");
             }
             else
             {
                 MainWindow.Products.Add(product);
+
                 MessageBox.Show("Product was added","Information");
             }
             ComboBox0.SelectedIndex = 0;
             ComboBox1.SelectedIndex = 0;
             ComboBox2.SelectedIndex = 0;
+           
         }
 
 

@@ -27,6 +27,9 @@
                     <GradientStop Color="#FFE5E5E5" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
+            <ComboBoxItem Content="Fruits" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Vegetables" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Berries" HorizontalAlignment="Left" Width="118.4"/>
         </ComboBox>
 
     </Grid>

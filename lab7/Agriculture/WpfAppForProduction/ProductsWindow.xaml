@@ -7,23 +7,26 @@
         mc:Ignorable="d"
         Title="Products" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FF6DBA71" Icon="carrot-emoji.ico">
     <Grid>
-        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="353" Margin="104,22,89.6,0" VerticalAlignment="Top" Width="600" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Background="#FFB2EEB5" ItemsSource="{Binding YourSource}" 
+        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="355" Margin="78,22,85.6,0" VerticalAlignment="Top" Width="630" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Background="#FFB2EEB5" ItemsSource="{Binding YourSource}" 
                          CanUserResizeColumns="False"
-                         EnableRowVirtualization="False" >
+                         EnableRowVirtualization="False" SelectedItem="{Binding SelectedProduct}"  >
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center"  />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding Path=Number}" Width="25" />
                 <DataGridTextColumn Header="Type of product" Binding="{Binding Path=Type}" Width="150" />
                 <DataGridTextColumn Header="Kind" Binding="{Binding Path=Kind}" Width="150" />
                 <DataGridTextColumn Header="Technology" Binding="{Binding Path=Technology}" Width="170" />
-                <DataGridTextColumn Header="Price on killo" Binding="{Binding Path=PriceOnKillo}" Width="130" />
+                <DataGridTextColumn Header="Price on killo" Binding="{Binding Path=PriceOnKillo}" Width="135" />
 
             </DataGrid.Columns>
+           
+
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Margin="10,383,0,0" Height="27" Click="Button_Click" Background="#FFF07979" FontWeight="Bold" FontSize="14"/>
-
+        <Button Content="Delete"  Command="{Binding DeleteRowCommand }" HorizontalAlignment="Left" Margin="0,196,0,0" VerticalAlignment="Top" Width="73" Background="#FFF07979" Click="Button_Click_1"/>
     </Grid>
 </Window>

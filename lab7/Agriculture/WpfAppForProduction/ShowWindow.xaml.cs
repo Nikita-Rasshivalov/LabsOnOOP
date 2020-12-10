@@ -10,21 +10,29 @@ namespace WpfAppForProduction
     /// </summary>
     public partial class ShowWindow : Window
     {
+        /// <summary>
+        ///  Creates an instance of the ShowWindow class
+        /// </summary>
         public ShowWindow()
         {
             InitializeComponent();
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
 
-        }
-
+        /// <summary>
+        /// Returns on main page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
+        /// <summary>
+        /// Show information about products
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             CountVegetables.Content = 0;
@@ -58,16 +66,45 @@ namespace WpfAppForProduction
                     }
 
                 }
-              
+
 
             }
             CountVegetables.Content = countNonVegetables;
             CountFruits.Content = countNonFruits;
             CountBerries.Content = countNonBerries;
+            calcAverage();
+        }
+
+        /// <summary>
+        /// average eco and not eco production
+        /// </summary>
+        void calcAverage()
+        {
+
+            if (Kindbox.SelectedIndex == 0 )
+            {
+                   
+                PriceEco.Content = InfoAboutProduction.GetAverageEco(MainWindow.Products, ProdTypes.Fruits);
+                PriceNonEco.Content = InfoAboutProduction.GetAverageNoEco(MainWindow.Products, ProdTypes.Fruits);
+
+            }
+
+            if (Kindbox.SelectedIndex == 1)
+            {
+                PriceEco.Content = InfoAboutProduction.GetAverageEco(MainWindow.Products, ProdTypes.Vegetables);
+                PriceNonEco.Content = InfoAboutProduction.GetAverageNoEco(MainWindow.Products, ProdTypes.Vegetables);
+
+            }
+            if (Kindbox.SelectedIndex == 2)
+            {
+                PriceEco.Content= InfoAboutProduction.GetAverageEco(MainWindow.Products, ProdTypes.Berries);
+                PriceNonEco.Content = InfoAboutProduction.GetAverageNoEco(MainWindow.Products, ProdTypes.Berries);
+
+            }
+
 
 
 
         }
-
     }
 }

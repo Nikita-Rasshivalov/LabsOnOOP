@@ -16,48 +16,67 @@ using System.Windows.Shapes;
 namespace WpfAppForProduction
 {
     /// <summary>
-    /// Логика взаимодействия для EditWindow.xaml
+    /// The class for edit a information
     /// </summary>
     public partial class EditWindow : Window
     {
+        /// <summary>
+        /// Creates an instance of the EditWindow class
+        /// </summary>
         public EditWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Returns to the main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Deleate product button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-    
             for (int i = 0; i < MainWindow.Products.Count; i++)
             {
-                if (ComboBox.SelectedIndex == 0)
+
+                if (ComboBox.SelectedIndex == 0 && MainWindow.Products[i].Type == ProdTypes.Fruits)
                 {
-
                     MainWindow.Products.Remove(MainWindow.Products[i]);
-
+                    i--;
                 }
 
-                if (ComboBox.SelectedIndex == 1)
+                if (ComboBox.SelectedIndex == 1 && MainWindow.Products[i].Type == ProdTypes.Vegetables)
                 {
 
                     MainWindow.Products.Remove(MainWindow.Products[i]);
+                    i--;
                 }
 
-                if (ComboBox.SelectedIndex == 2)
+                if (ComboBox.SelectedIndex == 2 && MainWindow.Products[i].Type == ProdTypes.Berries)
                 {
                     MainWindow.Products.Remove(MainWindow.Products[i]);
-
+                    i--;
                 }
             }
-            MessageBox.Show("Product/s was deleated", "Information");
 
 
-
+            if (ComboBox.Text == "")
+            {
+                MessageBox.Show("Product/s was'n deleated");
+            }
+            else
+            {
+                MessageBox.Show("Product/s was deleated");
+            }
 
         }
     }

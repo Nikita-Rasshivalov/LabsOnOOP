@@ -31,6 +31,7 @@ namespace Production
         /// Technology of growing
         /// </summary>
         public bool Technology { get; set; }
+
         /// <summary>
         /// Product type
         /// </summary>
@@ -48,7 +49,7 @@ namespace Production
         /// <param name="firstPrice">firstPrice</param>
         /// <param name="kind">kind</param>
         /// <param name="technology">technology</param>
-        public InfoAboutProduction( double firstPrice, string kind, bool technology)
+        public InfoAboutProduction(double firstPrice, string kind, bool technology)
         {
             this.firstPrice = firstPrice;
             this.kind = kind;
@@ -67,7 +68,7 @@ namespace Production
             double newPrice;
             if (Technology == true)
             {
-                 newPrice = firstPrice + firstPrice*0.25;
+                newPrice = firstPrice + firstPrice * 0.25;
             }
             else
             {
@@ -82,19 +83,59 @@ namespace Production
         /// <param name="productions">productions</param>
         /// <param name="kind">kind</param>
         /// <returns></returns>
-        private static double GetAverage(List<InfoAboutProduction> productions, string kind)
+        public static double GetAverageEco(List<InfoAboutProduction> productions, ProdTypes type)
         {
             double sum = 0;
+            int count = 0;
             foreach (var prod in productions)
             {
-                if (prod.Technology == true && prod.kind == kind)
+                if (prod.Technology == true && prod.Type == type)
                 {
-                    sum += prod.firstPrice;
+                    sum += prod.PriceOnKillo;
+                    count++;
                 }
+
             }
-            double average = sum / productions.Count;
+            double average;
+
+            if (count==0)
+            {
+                average = 0;
+            }
+            else
+            {
+                average = sum / count;
+            }  
             return average;
         }
+
+        public static double GetAverageNoEco(List<InfoAboutProduction> productions, ProdTypes type)
+        {
+            double sum = 0;
+            int count = 0;
+            foreach (var prod in productions)
+            {
+
+
+                if (prod.Technology == false && prod.Type == type)
+                {
+                    sum += prod.PriceOnKillo;
+                    count++;
+                }
+            }
+            double average;
+
+            if (count == 0)
+            {
+                average = 0;
+            }
+            else
+            {
+                average = sum / count;
+            }
+            return average;
+        }
+
 
     }
 }

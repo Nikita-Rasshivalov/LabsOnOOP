@@ -11,10 +11,11 @@ namespace WpfAppForProduction
     {
 
 
-        public Info(ProdTypes type, string kind, double priceOnKillo, bool technology)
+        public Info(ProdTypes type, string kind, double priceOnKillo, bool technology, int number)
         {
             Type = type;
             Kind = kind;
+            Number = number;
             PriceOnKillo = priceOnKillo;
             if (technology==true)
             {
@@ -26,6 +27,7 @@ namespace WpfAppForProduction
             }
         }
 
+        public int Number { get; }
         public ProdTypes Type { get; set; }
         public string Kind { get; set; }
         public double PriceOnKillo { get; set; }
