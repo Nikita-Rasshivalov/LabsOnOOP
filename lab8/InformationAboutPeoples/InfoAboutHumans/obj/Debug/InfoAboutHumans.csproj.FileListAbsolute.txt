@@ -1,0 +1,13 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.MainForm.resources
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.Properties.Resources.resources
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.csproj.GenerateResource.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\bin\Debug\InfoAboutHumans.exe.config
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\bin\Debug\InfoAboutHumans.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\bin\Debug\InfoAboutHumans.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\bin\Debug\Peoples.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\bin\Debug\Peoples.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.csproj.CopyComplete
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.exe
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.pdb
