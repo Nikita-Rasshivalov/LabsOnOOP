@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Peoples;
 
@@ -14,22 +8,17 @@ namespace InfoAboutHumans
 {
     public partial class MainForm : Form
     {
-        List<Human> humans = new List<Human>();
+        public List<Human> humans = new List<Human>();
 
 
 
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void buttonRead_Click(object sender, EventArgs e)
-        {
-
-           
-         
 
         }
+
+
 
 
 
@@ -47,12 +36,11 @@ namespace InfoAboutHumans
             return data;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnShow_Click(object sender, EventArgs e)
         {
-            ShowForm show = new ShowForm();
-            show.ShowDialog();
+            ShowForm show = new ShowForm(humans);
 
-        
+            show.ShowDialog();
         }
     }
 }

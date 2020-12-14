@@ -22,6 +22,21 @@ namespace Peoples
 
         }
         /// <summary>
+        /// Convert to string
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns>loadsreturns>
+        public override string ConvertToString(int[] load)
+        {
+            string loads = "";
+            foreach (var i in load)
+            {
+                loads = loads + " " + i.ToString();
+            }
+            loads += " (Count bottles) ";
+            return loads;
+        }
+        /// <summary>
         /// Override  Svedenija
         /// </summary>
         /// <returns>Year load</returns>
@@ -41,8 +56,7 @@ namespace Peoples
         public override string GetInfo()
         {
             double bottles = Svedenija();
-
-            string info = $"{secondName} {status} {birth} {bottles}";
+            string info = $"{secondName} {status} {birth} {bottles} {"(Count bottles)"}";
             return info;
         }
     }

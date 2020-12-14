@@ -23,6 +23,22 @@ namespace Peoples
         {
 
         }
+        /// <summary>
+        /// ConvertToString
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns>loads</returns>
+        public override string ConvertToString(int[] load)
+        {
+            string loads = "";
+
+            foreach (var i in load)
+            {
+                loads = loads + " " + i.ToString();
+            }
+            loads += " (Marks) ";            
+            return loads;
+        }
 
 
         /// <summary>
@@ -47,7 +63,7 @@ namespace Peoples
         public override string GetInfo()
         {
             double average = Svedenija();
-            string info = $"{secondName} {status} {birth} {average}";
+            string info = $"{secondName} {status} {birth} {average} {"(Average mark)"}";
             return info;
         }
     }

@@ -9,7 +9,7 @@ namespace Peoples
     /// <summary>
     /// Enumeration of status
     /// </summary>
-    public enum StatusOfHuman
+    public  enum StatusOfHuman
     {
         Student,
         Teacher,
@@ -33,7 +33,17 @@ namespace Peoples
         /// birth
         /// </summary>
         public int birth;
-
+        /// <summary>
+        /// Years old
+        /// </summary>
+        public double YearsOld { get { return Svedenija();  }  }
+        /// <summary>
+        /// Lods
+        /// </summary>
+        public string Loads { get { return GetInfo(); } }
+        /// <summary>
+        /// Load
+        /// </summary>
         public int[] load;
 
         /// <summary>
@@ -68,7 +78,20 @@ namespace Peoples
             else
                 throw new Exception("Невозможно сравнить два объекта");
         }
-
+        /// <summary>
+        /// Convert To String
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns>loads</returns>
+        public virtual string ConvertToString(int[] load)
+        {
+            string loads = "";
+            foreach (var i in load)
+            {
+                loads = loads + " " + i.ToString();
+            }
+            return loads;
+        }
 
         /// <summary>
         /// virtual method Svedenija about human birth
@@ -76,9 +99,10 @@ namespace Peoples
         /// <returns>birth</returns>
         public virtual double Svedenija()
         {
-            birth = DateTime.Now.Year - birth;
+            birth = DateTime.Now. Year- birth;
             return birth;
         }
+
         /// <summary>
         /// Abstract Method GetInfo
         /// </summary>

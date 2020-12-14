@@ -1,6 +1,6 @@
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\bin\Debug\Peoples.dll
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\bin\Debug\Peoples.pdb
-C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\obj\Debug\Peoples.csprojAssemblyReference.cache
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\obj\Debug\Peoples.csproj.CoreCompileInputs.cache
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\obj\Debug\Peoples.dll
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\obj\Debug\Peoples.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\Peoples\obj\Debug\Peoples.csprojAssemblyReference.cache

@@ -26,10 +26,10 @@ namespace Peoples
             switch (status)
             {
                 case StatusOfHuman.Teacher:
-                    human = new Student(secondNmae,StatusOfHuman.Teacher,birth, load);
+                    human = new Teacher(secondNmae,StatusOfHuman.Teacher, birth, load);
                     break;
                 case StatusOfHuman.Student:
-                    human = new Teacher(secondNmae, StatusOfHuman.Student, birth, load);
+                    human = new Student(secondNmae, StatusOfHuman.Student, birth, load);
                     break;
                 case StatusOfHuman.Bom:
                     human = new Bom(secondNmae, StatusOfHuman.Bom, birth, load);

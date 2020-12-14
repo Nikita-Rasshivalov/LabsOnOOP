@@ -11,7 +11,8 @@ namespace InfoAboutHumans
 {
     public class Reader
     {
-        public static List<Human> GetTrips(string path)
+
+        public static List<Human> GetHuman(string path)
         {
             List<Human> humans = new List<Human>();
             int addedNumber = 0;
@@ -19,22 +20,19 @@ namespace InfoAboutHumans
             foreach (var stringHuman in data)
             {
                 string[] humanValues = stringHuman.Split();
+               
                 string secondName = humanValues[0];
 
                 StatusOfHuman status;
-                Enum.TryParse(humanValues[2], out status);
+                Enum.TryParse(humanValues[2], true, out status);
                 int birthDate;
                 int.TryParse(humanValues[1], out birthDate);
-                
-       
                 List<string> stringLoad = new List<string>();
                 for (var i = 3; i < humanValues.Length; i++)
                 {
                     stringLoad.Add(humanValues[i]);
                 }
-
                 int[] load = ParseLoad(stringLoad);
-
                 Human human = HumansCreator.CreateHuman(secondName, birthDate, status, load);
                 if (human != null)
                 {
