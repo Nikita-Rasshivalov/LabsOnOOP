@@ -11,15 +11,18 @@ namespace Peoples
     /// </summary>
     public class Teacher : Human
     {
-
-
+        /// <summary>
+        /// status
+        /// </summary>
+        private StatusOfHuman status = StatusOfHuman.Teacher;
+        public override StatusOfHuman Status { get { return status; } }
         /// <summary>
         ///  Create  an instance of the Teacher
         /// </summary>
         /// <param name="secondName">Second name</param>
         /// <param name="status">Status</param>
         /// <param name="birth">Birth</param>
-        public Teacher(string secondName, StatusOfHuman status, int birth, int[] load) : base(secondName, status, birth, load)
+        public Teacher(string secondName,  int birth, int[] load) : base(secondName, birth, load)
         {
 
         }
@@ -92,7 +95,7 @@ namespace Peoples
         public override string GetInfo()
         {
             double YearLoad = Svedenija();
-            string info = $"{secondName} {status} {birth} {YearLoad} {"(Load)"}";
+            string info = $"{secondName} {Status} {YearsOld} | {YearLoad} {"(Load)"}";
             return info;
         }
     }

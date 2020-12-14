@@ -25,8 +25,9 @@ namespace InfoAboutHumans
 
         void Funtcion(DataGridView dataGridView1, List<Human> humans)
         {
-            dataGridView1.Size = new Size(580, 300);
+            dataGridView1.Size = new Size(580, 290);
             dataGridView1.RowHeadersVisible = false;
+            
             foreach (DataGridViewColumn column in dataGridView1.Columns)
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             var column1 = new DataGridViewColumn();
@@ -38,7 +39,7 @@ namespace InfoAboutHumans
             column1.CellTemplate = new DataGridViewTextBoxCell();
 
             var column2 = new DataGridViewColumn();
-            column2.HeaderText = "Years old";
+            column2.HeaderText = "Birth";
             column2.Name = "birth";
             column2.Width = 120;
             column2.CellTemplate = new DataGridViewTextBoxCell();
@@ -63,6 +64,7 @@ namespace InfoAboutHumans
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
+         
 
             dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
             dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
@@ -70,29 +72,34 @@ namespace InfoAboutHumans
             string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
             dataGridView1.ReadOnly = true;
             humans = Reader.GetHuman(path);
-        
 
+            humans.Sort();
             foreach (var hum in humans)
             {
-                dataGridView1.Rows.Add(hum.secondName, hum.YearsOld, hum.status, hum.Loads);
+                dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);
                 
+            }
+            
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+           
+                if (DateTime.Now.Year - Convert.ToInt32(row.Cells[1].Value ) > 19 &&  row.Cells[2].Value.ToString() == "Student")
+                {
+                    row.DefaultCellStyle.ForeColor = Color.Red;
+                }
             }
 
            
-        
-
-
-            
 
 
 
 
 
+        }
 
-
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

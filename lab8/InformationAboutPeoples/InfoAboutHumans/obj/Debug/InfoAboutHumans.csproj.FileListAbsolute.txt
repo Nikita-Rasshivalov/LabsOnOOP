@@ -11,3 +11,5 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\b
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.csproj.CopyComplete
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.exe
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.ShowForm.resources
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.MoreInfoForm.resources

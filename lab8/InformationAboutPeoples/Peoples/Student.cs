@@ -11,7 +11,11 @@ namespace Peoples
     /// </summary>
     public class Student : Human
     {
-     
+        /// <summary>
+        /// status
+        /// </summary>
+        private StatusOfHuman status = StatusOfHuman.Student;
+        public override StatusOfHuman Status { get { return status; } }
 
         /// <summary>
         ///  Create  an instance of the Student
@@ -19,7 +23,7 @@ namespace Peoples
         /// <param name="secondName">Second name</param>
         /// <param name="status">Status</param>
         /// <param name="birth">Birth</param>
-        public Student(string secondName, StatusOfHuman status, int birth,int[] load) : base(secondName,status,birth, load)
+        public Student(string secondName,  int birth,int[] load) : base(secondName,birth, load)
         {
 
         }
@@ -63,7 +67,7 @@ namespace Peoples
         public override string GetInfo()
         {
             double average = Svedenija();
-            string info = $"{secondName} {status} {birth} {average} {"(Average mark)"}";
+            string info = $"{secondName} {Status} {YearsOld} | {average} {"(Average mark)"}";
             return info;
         }
     }

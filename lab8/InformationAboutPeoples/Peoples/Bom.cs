@@ -9,15 +9,20 @@ namespace Peoples
     /// <summary>
     /// Class bom
     /// </summary>
-    public class Bom:Human
+    public class Bom : Human
     {
+        /// <summary>
+        /// status
+        /// </summary>
+        private StatusOfHuman status = StatusOfHuman.Bom;
+        public override StatusOfHuman Status { get { return status; } }
         /// <summary>
         /// Create bom
         /// </summary>
         /// <param name="secondName"> second Name </param>
         /// <param name="status">status</param>
         /// <param name="birth">birthparam>
-        public Bom(string secondName, StatusOfHuman status, int birth,int[] load) : base(secondName, status, birth, load)
+        public Bom(string secondName, int birth, int[] load) : base(secondName, birth, load)
         {
 
         }
@@ -56,7 +61,7 @@ namespace Peoples
         public override string GetInfo()
         {
             double bottles = Svedenija();
-            string info = $"{secondName} {status} {birth} {bottles} {"(Count bottles)"}";
+            string info = $"{secondName} {Status} {YearsOld} | {bottles} {"(Count bottles)"}";
             return info;
         }
     }

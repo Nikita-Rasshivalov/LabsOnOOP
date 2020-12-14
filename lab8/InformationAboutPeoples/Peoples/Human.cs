@@ -9,7 +9,7 @@ namespace Peoples
     /// <summary>
     /// Enumeration of status
     /// </summary>
-    public  enum StatusOfHuman
+    public enum StatusOfHuman
     {
         Student,
         Teacher,
@@ -18,7 +18,7 @@ namespace Peoples
     /// <summary>
     /// abstract class Human
     /// </summary>
-    public abstract class Human:IComparable 
+    public abstract class Human : IComparable
     {
         /// <summary>
         /// secondName
@@ -27,8 +27,9 @@ namespace Peoples
 
         /// <summary>
         /// StatusOfHuman status
-        /// </summary>
-        public StatusOfHuman status;
+        /// </summary
+
+        public abstract StatusOfHuman Status { get; }
         /// <summary>
         /// birth
         /// </summary>
@@ -36,7 +37,7 @@ namespace Peoples
         /// <summary>
         /// Years old
         /// </summary>
-        public double YearsOld { get { return Svedenija();  }  }
+        public double YearsOld { get { return GetYear(); } }
         /// <summary>
         /// Lods
         /// </summary>
@@ -50,12 +51,11 @@ namespace Peoples
         ///  Create  an instance of the Human
         /// </summary>
         /// <param name="secondName">Second name</param>
-        /// <param name="status">Status</param>
         /// <param name="birth">Birth</param>
-        public Human(string secondName, StatusOfHuman status, int birth, int[] load)
+        public Human(string secondName, int birth, int[] load)
         {
             this.secondName = secondName;
-            this.status = status;
+       
             this.birth = birth;
             this.load = load;
         }
@@ -99,7 +99,16 @@ namespace Peoples
         /// <returns>birth</returns>
         public virtual double Svedenija()
         {
-            birth = DateTime.Now. Year- birth;
+            birth = DateTime.Now.Year - birth;
+            return birth;
+        }
+        /// <summary>
+        /// Get years old
+        /// </summary>
+        /// <returns></returns>
+        public  double GetYear()
+        {
+            birth = DateTime.Now.Year - birth;
             return birth;
         }
 

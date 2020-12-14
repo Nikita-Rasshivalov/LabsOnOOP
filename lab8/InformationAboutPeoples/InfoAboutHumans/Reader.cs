@@ -9,9 +9,16 @@ using Peoples;
 
 namespace InfoAboutHumans
 {
+    /// <summary>
+    /// class Reader
+    /// </summary>
     public class Reader
     {
-
+        /// <summary>
+        /// GetHuman
+        /// </summary>
+        /// <param name="path">path</param>
+        /// <returns>humans list</returns>
         public static List<Human> GetHuman(string path)
         {
             List<Human> humans = new List<Human>();
@@ -42,7 +49,11 @@ namespace InfoAboutHumans
             }
             return humans;
         }
-
+        /// <summary>
+        /// Pare data 
+        /// </summary>
+        /// <param name="values">loads</param>
+        /// <returns>loads</returns>
         static int[] ParseLoad(List<string> values)
         {
             List<int> loadList = new List<int>();
