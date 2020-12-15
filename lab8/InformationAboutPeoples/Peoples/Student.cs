@@ -61,8 +61,12 @@ namespace Peoples
             }
             return count;
         }
-
-
+        /// <summary>
+        /// Indexator
+        /// </summary>
+        /// <param name="nameOfDiscipline">nameOfDiscipline</param>
+        /// <returns></returns>
+        public override int this[string nameOfDiscipline] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         /// <summary>
         ///  Override method Svedenija
         /// </summary>

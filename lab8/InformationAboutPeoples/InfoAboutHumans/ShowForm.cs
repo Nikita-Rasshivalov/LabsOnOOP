@@ -76,9 +76,7 @@ namespace InfoAboutHumans
             humans.Sort();
             foreach (var hum in humans)
             {
-                dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);
-               
-                
+                dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);  
             }
             
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -97,6 +95,12 @@ namespace InfoAboutHumans
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

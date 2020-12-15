@@ -49,6 +49,13 @@ namespace Peoples
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Indexator
+        /// </summary>
+        /// <param name="nameOfDiscipline">nameOfDiscipline</param>
+        /// <returns></returns>
+        public override int this[string nameOfDiscipline] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         /// <summary>
         /// Override  Svedenija
         /// </summary>

@@ -32,6 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Count = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LabelInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -50,9 +52,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(7, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 29);
+            this.label1.Size = new System.Drawing.Size(614, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Number of students with more than one grade nine   -";
+            this.label1.Text = "Number of students with more than one grade nine :";
             // 
             // Count
             // 
@@ -63,21 +65,44 @@
             this.Count.Size = new System.Drawing.Size(0, 29);
             this.Count.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(7, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(320, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Information about students";
+            // 
+            // LabelInfo
+            // 
+            this.LabelInfo.AutoSize = true;
+            this.LabelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelInfo.Location = new System.Drawing.Point(7, 135);
+            this.LabelInfo.Name = "LabelInfo";
+            this.LabelInfo.Size = new System.Drawing.Size(0, 29);
+            this.LabelInfo.TabIndex = 4;
+            // 
             // MoreInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LabelInfo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Count);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MoreInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MoreInfoForm";
+            this.Text = "More information";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +113,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Count;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LabelInfo;
     }
 }

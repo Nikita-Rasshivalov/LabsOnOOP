@@ -11,7 +11,6 @@ Shtucer 2000 student 10 10 10 5
 Strumel 1998 student 5 10 10 4
 Vilox 2002 bom 10 12
 Jaja 1978 teacher 24 44 13
-Lipa 1966 teacher 18 22 25
+Lipa 1966 teacer 18 22 25
 Limbizkit 1977 bom 12 12
 Limbo 2003 student 6 9 9 9
-Limbosa 2002 student 6 9 9 9

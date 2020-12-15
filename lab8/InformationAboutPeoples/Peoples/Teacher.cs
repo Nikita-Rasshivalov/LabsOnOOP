@@ -11,6 +11,7 @@ namespace Peoples
     /// </summary>
     public class Teacher : Human
     {
+
         /// <summary>
         /// status
         /// </summary>
@@ -21,7 +22,7 @@ namespace Peoples
         /// </summary>
         /// <param name="secondName">Second name</param>
         /// <param name="birth">Birth</param>
-        public Teacher(string secondName,  int birth, int[] load) : base(secondName, birth, load)
+        public Teacher(string secondName, int birth, int[] load) : base(secondName, birth, load)
         {
 
         }
@@ -43,9 +44,9 @@ namespace Peoples
         /// <summary>
         /// Indexator
         /// </summary>
-        /// <param name="nameOfDiscipline">Name of discipline</param>
+        /// <param name="nameOfDiscipline">nameOfDiscipline</param>
         /// <returns>values of disciplineLoad </returns>
-        public int this[string nameOfDiscipline]
+        public override int this[string nameOfDiscipline]
         {
             get
             {
@@ -74,7 +75,27 @@ namespace Peoples
             }
         }
         /// <summary>
-        /// GetMoreInfo
+        /// Get max load
+        /// </summary>
+        /// <param name="humans">humans</param>
+        /// <param name="subject">subject</param>
+        /// <returns></returns>
+        public static int MaxLoad(List<Teacher> teachers, string subject)
+        {
+            int max = 0;
+            foreach (var hum in teachers)
+            {
+                if (hum.Status == StatusOfHuman.Teacher && hum.YearsOld > 40)
+                {
+                    if (max < hum[subject])
+                        max = hum[subject];
+                }
+            }
+            return max;
+        }
+
+        /// <summary>
+        /// Get More Info
         /// </summary>
         /// <param name="load">load</param>
         /// <returns></returns>
@@ -106,6 +127,7 @@ namespace Peoples
             return info;
         }
     }
-
 }
+
+
 

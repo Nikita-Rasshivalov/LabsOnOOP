@@ -16,7 +16,7 @@ namespace InfoAboutHumans
         public MoreInfoForm(List<Human> humans)
         {
             InitializeComponent();
-            Count.Text = FunctionStudent(humans).ToString();
+            FunctionStudent(humans).ToString();
 
         }
 
@@ -25,39 +25,31 @@ namespace InfoAboutHumans
             Close();
         }
 
+
+
         int FunctionStudent(List<Human> humans)
         {
             string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
             humans = Reader.GetHuman(path);
             int counter = 0;
-            string loads = "";
-
-
-
-            //loads = hum.ConvertToString(hum.load);
+            string info = "";
             foreach (var hum in humans)
             {
-                
-
 
                 if (hum.Status == StatusOfHuman.Student)
                 {
+                    
 
-                    if (hum.GetMoreInfo(hum.load)>2)
+                    if (hum.GetMoreInfo(hum.load) > 1)
                     {
+                        info += hum.secondName + hum.ConvertToString(hum.load) + '\n';
                         counter++;
                     }
-                 
-                    //counter = hum.GetMoreInfo(hum.load);
                     
                 }
-
-
-
-
-
             }
-            MessageBox.Show(counter.ToString());
+            LabelInfo.Text = info;
+            Count.Text = counter.ToString();
 
             return counter;
         }

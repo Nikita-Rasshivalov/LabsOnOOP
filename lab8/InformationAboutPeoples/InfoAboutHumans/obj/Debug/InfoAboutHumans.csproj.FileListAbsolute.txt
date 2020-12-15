@@ -13,3 +13,4 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\o
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.pdb
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.ShowForm.resources
 C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.MoreInfoForm.resources
+C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InformationAboutPeoples\InfoAboutHumans\obj\Debug\InfoAboutHumans.TeacherInformationForm.resources

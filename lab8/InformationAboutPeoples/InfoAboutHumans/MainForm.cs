@@ -10,17 +10,11 @@ namespace InfoAboutHumans
     {
         public List<Human> humans = new List<Human>();
 
-
-
         public MainForm()
         {
             InitializeComponent();
 
         }
-
-
-
-
 
         private static List<string> GetData()
         {
@@ -52,6 +46,12 @@ namespace InfoAboutHumans
         {
             MoreInfoForm more = new MoreInfoForm(humans);
             more.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TeacherInformationForm teach = new TeacherInformationForm(humans);
+            teach.ShowDialog();
         }
     }
 }

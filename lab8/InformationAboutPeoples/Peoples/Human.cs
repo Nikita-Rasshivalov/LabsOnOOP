@@ -46,7 +46,15 @@ namespace Peoples
         /// Load
         /// </summary>
         public int[] load;
-
+        /// <summary>
+        /// Indexator
+        /// </summary>
+        /// <param name="nameOfDiscipline">nameOfDiscipline</param>
+        /// <returns>loas</returns>
+        public abstract int this[string nameOfDiscipline]
+        {
+            get; set;
+        }
         /// <summary>
         ///  Create  an instance of the Human
         /// </summary>
