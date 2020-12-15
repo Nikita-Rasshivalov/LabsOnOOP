@@ -77,6 +77,7 @@ namespace InfoAboutHumans
             foreach (var hum in humans)
             {
                 dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);
+               
                 
             }
             
@@ -89,13 +90,9 @@ namespace InfoAboutHumans
                 }
             }
 
-           
-
-
-
-
-
         }
+
+      
 
         private void button1_Click(object sender, EventArgs e)
         {

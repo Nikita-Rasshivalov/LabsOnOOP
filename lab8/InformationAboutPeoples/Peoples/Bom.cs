@@ -20,7 +20,6 @@ namespace Peoples
         /// Create bom
         /// </summary>
         /// <param name="secondName"> second Name </param>
-        /// <param name="status">status</param>
         /// <param name="birth">birthparam>
         public Bom(string secondName, int birth, int[] load) : base(secondName, birth, load)
         {
@@ -40,6 +39,15 @@ namespace Peoples
             }
             loads += " (Count bottles) ";
             return loads;
+        }
+        /// <summary>
+        /// GetMoreInfo
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns></returns>
+        public override int GetMoreInfo(int[] load)
+        {
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Override  Svedenija

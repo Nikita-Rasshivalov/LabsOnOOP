@@ -21,7 +21,6 @@ namespace Peoples
         ///  Create  an instance of the Student
         /// </summary>
         /// <param name="secondName">Second name</param>
-        /// <param name="status">Status</param>
         /// <param name="birth">Birth</param>
         public Student(string secondName,  int birth,int[] load) : base(secondName,birth, load)
         {
@@ -42,6 +41,25 @@ namespace Peoples
             }
             loads += " (Marks) ";            
             return loads;
+        }
+
+        /// <summary>
+        /// GetMoreInfo
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns>Count marks more or exactly 9</returns>
+        public override int GetMoreInfo(int[] load)
+        {
+            int count = 0;
+          
+            for (int i = 0; i < load.Length; i++)
+            {
+                if (load[i] > 8)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
 

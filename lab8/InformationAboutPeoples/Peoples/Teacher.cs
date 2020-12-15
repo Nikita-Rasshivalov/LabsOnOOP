@@ -20,7 +20,6 @@ namespace Peoples
         ///  Create  an instance of the Teacher
         /// </summary>
         /// <param name="secondName">Second name</param>
-        /// <param name="status">Status</param>
         /// <param name="birth">Birth</param>
         public Teacher(string secondName,  int birth, int[] load) : base(secondName, birth, load)
         {
@@ -74,7 +73,15 @@ namespace Peoples
                 }
             }
         }
-
+        /// <summary>
+        /// GetMoreInfo
+        /// </summary>
+        /// <param name="load">load</param>
+        /// <returns></returns>
+        public override int GetMoreInfo(int[] load)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Override  Svedenija
         /// </summary>

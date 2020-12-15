@@ -92,6 +92,12 @@ namespace Peoples
             }
             return loads;
         }
+        /// <summary>
+        /// GetMoreInfo
+        /// </summary>
+        /// <returns>GetMoreInfo</returns>
+        public abstract int GetMoreInfo(int[] load);
+       
 
         /// <summary>
         /// virtual method Svedenija about human birth
@@ -105,8 +111,8 @@ namespace Peoples
         /// <summary>
         /// Get years old
         /// </summary>
-        /// <returns></returns>
-        public  double GetYear()
+        /// <returns>GetYear</returns>
+        public double GetYear()
         {
             birth = DateTime.Now.Year - birth;
             return birth;
