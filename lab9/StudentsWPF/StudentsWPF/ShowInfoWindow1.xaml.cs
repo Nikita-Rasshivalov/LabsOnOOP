@@ -36,13 +36,12 @@ namespace StudentsWPF
         /// Create ShowInfoWindow1
         /// </summary>
         /// <param name="Names"></param>
-        public ShowInfoWindow1(List<Exam> Names)
+        public ShowInfoWindow1(List<Exam> Names, List<Student> Students)
         {
             this.Students = Students;
             this.Names = Names;
             InitializeComponent();
             FuntcionAddTable(Names,Students);
-
 
         }
         /// <summary>
@@ -55,14 +54,10 @@ namespace StudentsWPF
             StudentMark[] marks = new StudentMark[2] { new StudentMark(new Exam("OOP"), 10), new StudentMark(new Exam("OAIP"), 5) };
             s1.Marks = marks;
             showTable.Items.Add(s1);
-            DataGridTextColumn textColumn = new DataGridTextColumn();
-            textColumn.Header = s1.Marks[0].Exam.NameOfExam;
-            textColumn.Binding = new Binding("FirstName");
-            showTable.Columns.Add(textColumn);
 
             foreach (var stud in Students)
             {
-                
+                showTable.Items.Add(stud.ThirdName);
             }
 
 
@@ -75,6 +70,7 @@ namespace StudentsWPF
         /// <param name="e"></param>
         private void Button_ClickClose(object sender, RoutedEventArgs e)
         {
+
             this.Close();
         }
 
