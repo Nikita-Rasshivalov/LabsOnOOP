@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace Exeptions
 {
 
-
+    /// <summary>
+    /// Class OutOfRangeException
+    /// </summary>
     public class OutOfRangeException : Exception
     {
         /// <summary>

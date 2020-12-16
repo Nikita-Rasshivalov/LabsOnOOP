@@ -3,3 +3,4 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Exeptions\bin\Debug\Exeptions
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Exeptions\obj\Debug\Exeptions.csproj.CoreCompileInputs.cache
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Exeptions\obj\Debug\Exeptions.dll
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Exeptions\obj\Debug\Exeptions.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Exeptions\obj\Debug\Exeptions.csprojAssemblyReference.cache

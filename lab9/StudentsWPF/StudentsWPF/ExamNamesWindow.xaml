@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="ExamNamesWindow" Height="450" Width="800">
+        Title="Exams name" Height="229.957" Width="314" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico" Background="#FFE4FCE5">
     <Grid>
-        <Label Content="Name of exam" HorizontalAlignment="Left" Height="36" Margin="314,38,0,0" VerticalAlignment="Top" Width="136" FontWeight="Bold" FontSize="16"/>
-        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="37" Margin="294,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="32" Margin="314,149,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Name of exam" HorizontalAlignment="Left" Height="36" Margin="77,44,0,0" VerticalAlignment="Top" Width="139" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="26" Margin="67,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="32" Margin="94,128,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
 
     </Grid>
 </Window>

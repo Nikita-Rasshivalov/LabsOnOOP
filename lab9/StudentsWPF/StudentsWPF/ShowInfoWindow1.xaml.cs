@@ -15,45 +15,69 @@ using System.Windows.Shapes;
 
 namespace StudentsWPF
 {
-  
+
 
     /// <summary>
-    /// Логика взаимодействия для ShowInfoWindow1.xaml
+    /// class ShowInfoWindow1
     /// </summary>
     public partial class ShowInfoWindow1 : Window
     {
-        DataGrid dataGrid1 { get; set; }
+        /// <summary>
+        /// List students
+        /// </summary>
+        public List<Student> Students { get; set; }
+
+        /// <summary>
+        /// List names of exams
+        /// </summary>
+
         public List<Exam> Names { get; set; }
+        /// <summary>
+        /// Create ShowInfoWindow1
+        /// </summary>
+        /// <param name="Names"></param>
         public ShowInfoWindow1(List<Exam> Names)
         {
+            this.Students = Students;
             this.Names = Names;
-            DataGrid dataGrid1 = new DataGrid();
-            this.dataGrid1 = dataGrid1;
             InitializeComponent();
-            FuntcionAddTable(Names);
-            
-           
+            FuntcionAddTable(Names,Students);
+
+
         }
         /// <summary>
         ///Function of drawing the table
         /// </summary>
-        void FuntcionAddTable(List<Exam> Names)
+        void FuntcionAddTable(List<Exam> Names, List<Student> Students)
         {
 
+            Student s1 = new Student("Nikita", "Parashnik", "Ivvanovich");
+            StudentMark[] marks = new StudentMark[2] { new StudentMark(new Exam("OOP"), 10), new StudentMark(new Exam("OAIP"), 5) };
+            s1.Marks = marks;
+            showTable.Items.Add(s1);
             DataGridTextColumn textColumn = new DataGridTextColumn();
-            textColumn.Header = "First Name";
+            textColumn.Header = s1.Marks[0].Exam.NameOfExam;
             textColumn.Binding = new Binding("FirstName");
-            dataGrid1.Columns.Add(textColumn);
+            showTable.Columns.Add(textColumn);
+
+            foreach (var stud in Students)
+            {
+                
+            }
 
 
 
         }
-        
+        /// <summary>
+        /// Close this window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_ClickClose(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-       
+
     }
 }

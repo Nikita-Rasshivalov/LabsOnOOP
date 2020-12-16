@@ -18,17 +18,29 @@ using Exeptions;
 namespace StudentsWPF
 {
     /// <summary>
-    /// Логика взаимодействия для ExamWindow.xaml
+    /// Class ExamWindow
     /// </summary>
     public partial class ExamWindow : Window
     {
+        /// <summary>
+        /// List names of exams
+        /// </summary>
         public List<Exam> Names { get; set; }
+        /// <summary>
+        /// Create ExamWindow
+        /// </summary>
+        /// <param name="Names"></param>
         public ExamWindow(List<Exam> Names)
         {
             InitializeComponent();
             this.Names = Names;
 
         }
+        /// <summary>
+        /// Add exam button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int count = GetCount();
@@ -59,6 +71,10 @@ namespace StudentsWPF
 
 
         }
+        /// <summary>
+        /// Get count
+        /// </summary>
+        /// <returns>count of exam</returns>
         public int GetCount()
         {
             int CountExam;
@@ -66,7 +82,11 @@ namespace StudentsWPF
             MainWindow.NumOfExams = CountExam;
             return CountExam;
         }
-
+        /// <summary>
+        /// Check  on enter int num 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NumExam_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !(Char.IsDigit(e.Text, 0));

@@ -16,11 +16,18 @@ using System.Windows.Shapes;
 namespace StudentsWPF
 {
     /// <summary>
-    /// Логика взаимодействия для AddWindow.xaml
+    /// Class AddWindow
     /// </summary>
     public partial class AddWindow : Window
     {
+        /// <summary>
+        /// Students list
+        /// </summary>
         public List<Student> Students { get; set; }
+        /// <summary>
+        /// Create AddWindow
+        /// </summary>
+        /// <param name="Students">Students</param>
         public AddWindow(List<Student> Students)
         {
             this.Students = Students;
@@ -28,6 +35,10 @@ namespace StudentsWPF
 
 
         }
+        /// <summary>
+        /// Create student
+        /// </summary>
+        /// <returns>student</returns>
         public Student CreateStudent()
         {
             string secondName = secondNamebox.Text;
@@ -38,12 +49,20 @@ namespace StudentsWPF
         }
 
 
-
+        /// <summary>
+        /// Close this window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Add student button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void AddButtom_Click(object sender, RoutedEventArgs e)
         {

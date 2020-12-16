@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="ShowInfoWindow1" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Show Information" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="358*"/>
+        </Grid.ColumnDefinitions>
         <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="381" Margin="10,0,9.6,0" VerticalAlignment="Top" Width="774" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Background="#FFE4FCE5" ItemsSource="{Binding YourSource}" 
                          CanUserResizeColumns="False"
-                         EnableRowVirtualization="False" SelectedItem="{Binding ???}"  >
+                         EnableRowVirtualization="False" SelectedItem="{Binding Student}" Grid.ColumnSpan="2"  >
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center"  />
@@ -19,9 +23,11 @@
                 <DataGridTextColumn Header="Second Name" Binding="{Binding Path=SecondName}" Width="100" />
                 <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" Width="100" />
                 <DataGridTextColumn Header="Patronymic" Binding="{Binding Path=ThirdName}" Width="150" />
-
-
             </DataGrid.Columns>
+
+            
+                
+               
 
 
         </DataGrid>

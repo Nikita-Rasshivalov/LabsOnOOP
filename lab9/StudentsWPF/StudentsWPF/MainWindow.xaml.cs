@@ -17,19 +17,30 @@ using Students;
 namespace StudentsWPF
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// class MainWindow
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        /// <summary>
+        /// List students
+        /// </summary>
         public List<Student> Students { get; set; }
-
+        /// <summary>
+        /// Listy names of exams
+        /// </summary>
         public List<Exam> Names { get; set; }
 
-
+        /// <summary>
+        /// Flag for enter exams and nums of exams
+        /// </summary>
         public static bool Flag { get; set; }
+        /// <summary>
+        /// Nums of exams
+        /// </summary>
         public static int NumOfExams;
-
+        /// <summary>
+        /// Create MainWindow
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +48,11 @@ namespace StudentsWPF
             Names = new List<Exam>();
 
         }
+        /// <summary>
+        /// AddWindow button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Button_Add(object sender, RoutedEventArgs e)
         {
@@ -44,12 +60,21 @@ namespace StudentsWPF
             add.ShowDialog();
         }
 
-       
+       /// <summary>
+       /// ShowWindow button
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void Button_Show(object sender, RoutedEventArgs e)
         {
             ShowInfoWindow1 add = new ShowInfoWindow1(Names);
             add.ShowDialog();
         }
+        /// <summary>
+        /// Add exams button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Add_Exams_Click(object sender, RoutedEventArgs e)
         {
@@ -63,8 +88,6 @@ namespace StudentsWPF
             {
                 MessageBox.Show("Exams have been added");
             }
-           
-
         }
     }
 }

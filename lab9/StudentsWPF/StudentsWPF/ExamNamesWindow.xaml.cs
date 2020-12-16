@@ -16,18 +16,28 @@ using System.Windows.Shapes;
 namespace StudentsWPF
 {
     /// <summary>
-    /// Логика взаимодействия для ExamNamesWindow.xaml
+    /// 
     /// </summary>
     public partial class ExamNamesWindow : Window
     {
+        /// <summary>
+        /// List names of exams
+        /// </summary>
         public List<Exam> Names { get; set; }
+        /// <summary>
+        /// Create ExamNamesWindow
+        /// </summary>
+        /// <param name="Names"></param>
         public ExamNamesWindow(List<Exam> Names)
         {
             InitializeComponent();
             this.Names = Names;
         }
 
-
+        /// <summary>
+        /// Get name of exam
+        /// </summary>
+        /// <returns>name of exam</returns>
 
         public Exam GetNameOfExam()
         {
@@ -37,11 +47,19 @@ namespace StudentsWPF
          
             return exam;
         }
-
+        /// <summary>
+        /// Add exam button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Exam name = GetNameOfExam();
             Names.Add(name);
+            MessageBox.Show("Name of exam was added");
+            NameBox.Text = "";
+            Close();
+
         }
     }
 }

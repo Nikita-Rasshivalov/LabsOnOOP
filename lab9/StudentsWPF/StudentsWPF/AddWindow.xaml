@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="AddWindow" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Add" Height="322" Width="491.2" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico" Background="#FFE4FCE5">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="755*"/>
+            <ColumnDefinition Width="39*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Second Name" HorizontalAlignment="Left" VerticalAlignment="Top" Width="328" Margin="10,32,0,0" FontWeight="Bold" FontSize="16" Height="32"/>
-        <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,97,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="91"/>
-        <Label Content="Patronymic" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,165,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="96"/>
-        <Button x:Name="AddButtom" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="143" Margin="641,376,0,0" Height="34" Click="AddButtom_Click"/>
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="10,376,0,0" Height="34" Click="Button_Click"/>
-        <TextBox x:Name="secondNamebox" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
-        <TextBox x:Name="firstNamebox" HorizontalAlignment="Left" Height="23" Margin="10,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
-        <TextBox x:Name="patronymicbox" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+        <Label Content="Second Name" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Margin="10,10,0,0" FontWeight="Bold" FontSize="16" Height="32"/>
+        <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,84,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="91"/>
+        <Label Content="Patronymic" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,158,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="96"/>
+        <Button x:Name="AddButtom" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="356,248,0,0" Height="34" Click="AddButtom_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="10,248,0,0" Height="34" Click="Button_Click"/>
+        <TextBox x:Name="secondNamebox" HorizontalAlignment="Left" Height="23" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="firstNamebox" HorizontalAlignment="Left" Height="23" Margin="10,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="patronymicbox" HorizontalAlignment="Left" Height="23" Margin="10,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Window>

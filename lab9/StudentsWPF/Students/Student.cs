@@ -31,7 +31,7 @@ namespace Students
             this.FirstName = FirstName;
             this.ThirdName = ThirdName;
         }
-        public bool ExistanceMark { get; set; } = false;
+
 
         /// <summary>
         /// Stud marks
