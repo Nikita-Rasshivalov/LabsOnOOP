@@ -12,18 +12,32 @@ using ColorConverter = System.Drawing.ColorConverter;
 
 namespace InfoAboutHumans
 {
-
+    /// <summary>
+    /// Class ShowForm
+    /// </summary>
     public partial class ShowForm : Form
     {
+        public List<Human> humans { get; set; }
+        private DataGridView dataGridView1 { get; set; }
+        /// <summary>
+        /// ShowForm
+        /// </summary>
+        /// <param name="humans">humans</param>
         public ShowForm(List<Human> humans)
         {
             DataGridView dataGridView1 = new DataGridView();
+            this.dataGridView1=dataGridView1;
             InitializeComponent();
             this.Controls.Add(dataGridView1);
-            Funtcion(dataGridView1, humans);
+            this.humans = humans;
+            Funtcion( humans);
         }
-
-        void Funtcion(DataGridView dataGridView1, List<Human> humans)
+        /// <summary>
+        /// Create table
+        /// </summary>
+        /// <param name="dataGridView1">dataGridView1</param>
+        /// <param name="humans">humans</param>
+        void Funtcion(List<Human> humans)
         {
             dataGridView1.Size = new Size(580, 290);
             dataGridView1.RowHeadersVisible = false;
@@ -55,30 +69,22 @@ namespace InfoAboutHumans
             column4.Name = "data";
             column4.Width = 200;
             column4.CellTemplate = new DataGridViewTextBoxCell();
-
             dataGridView1.Columns.Add(column1);
             dataGridView1.Columns.Add(column2);
             dataGridView1.Columns.Add(column3);
             dataGridView1.Columns.Add(column4);
-
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
-         
-
             dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
             dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
             dataGridView1.Columns[3].SortMode = DataGridViewColumnSortMode.Automatic;
-            string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
             dataGridView1.ReadOnly = true;
-            humans = Reader.GetHuman(path);
-
             humans.Sort();
             foreach (var hum in humans)
             {
                 dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);  
             }
-            
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
            
@@ -90,17 +96,25 @@ namespace InfoAboutHumans
 
         }
 
-      
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            FunctionDelete(humans);
+        }
+        public void FunctionDelete( List<Human> humans )
+        {
+         
+            int selectedIndex = dataGridView1.CurrentRow.Index; 
+            dataGridView1.Rows.RemoveAt(selectedIndex);
+            humans.RemoveAt(selectedIndex); 
+
+            //MessageBox.Show("Human was deleted");
+            
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -11,61 +11,58 @@ using System.Windows.Forms;
 
 namespace InfoAboutHumans
 {
+    /// <summary>
+    /// Class TeacherInformationForm
+    /// </summary>
     public partial class TeacherInformationForm : Form
     {
+        /// <summary>
+        /// TeacherInformationForm 
+        /// </summary>
+        /// <param name="humans"></param>
         public TeacherInformationForm(List<Human> humans)
         {
             InitializeComponent();
             Function(humans);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        public  void Function(List<Human> humans) {
-            string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
-            humans = Reader.GetHuman(path);
+        /// <summary>
+        /// Teacher loads
+        /// </summary>
+        /// <param name="humans">humans</param>
+        public void Function(List<Human> humans)
+        {
+            humans = Reader.GetHuman();
             var teachersList = new List<Teacher>();
+            string info = "";
             foreach (var hum in humans)
             {
-                if (hum.Status == StatusOfHuman.Teacher){
+                if (hum.Status == StatusOfHuman.Teacher && (DateTime.Now.Year - hum.birth)>40)
+                {
                     teachersList.Add((Teacher)hum);
+                    info += hum.secondName+ " " + hum.YearsOld + " " + ("years") + " " + hum.ConvertToString(hum.load) + '\n';
+                 
+
                 }
             }
-            
-
-
             var maxOne = Teacher.MaxLoad(teachersList, "OOP");
+            Infolabel1.Text = maxOne.ToString();
             var maxTwo = Teacher.MaxLoad(teachersList, "Math");
+            Infolabel2.Text = maxTwo.ToString();
             var maxThree = Teacher.MaxLoad(teachersList, "Physics");
-
-            MessageBox.Show((teachersList.Count).ToString());
-
-            if (comboBox1.SelectedIndex == 0)
-            {
-                InfoLabel.Text = maxOne.ToString();
-
-            }
-            if (comboBox1.SelectedIndex == 2)
-            {
-                InfoLabel.Text = maxTwo.ToString();
-
-            }
-            if (comboBox1.SelectedIndex == 3)
-            {
-                InfoLabel.Text = maxThree.ToString();
-
-            }
-
-
-
-
+            Infolabel3.Text = maxThree.ToString();
+            labelInfo.Text  = info;
+           
         }
 
-
-
-
+     
     }
 }

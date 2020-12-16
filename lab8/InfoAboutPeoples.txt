@@ -2,7 +2,7 @@ Ivanov 2004 Student 9 9 3 4
 Petrov 1982 Bom 12 24
 Sidorov 1967 Teacher 55 67 32
 Slavicov 1999 Bom 14 12
-Ivush 1967 Teacher 55 76 20
+Ivush 1980 Teacher 55 76 20
 Slhiven 2002 Student 7 5 2 6
 Ribos 2000 student 2 6 5 4
 Aleg 1959 teacher 25 29 32
@@ -10,8 +10,8 @@ Rula 1978 bom 15 21
 Shtucer 2000 student 10 10 10 5
 Strumel 1998 student 5 10 10 4
 Vilox 2002 bom 10 12
-Jaja 1978 teacher 24 44 13
-Lipa 1966 teacher 18 22 25
+Jaja 1998 teacher 24 44 13
+Lipa 1970 teacher 18 22 25
 Limbizkit 1977 bom 12 12
 Limbo 2003 student 6 9 9 9
 Limbosa 2002 student 6 9 9 9

@@ -6,52 +6,65 @@ using Peoples;
 
 namespace InfoAboutHumans
 {
+    /// <summary>
+    /// class  MainForm
+    /// </summary>
     public partial class MainForm : Form
     {
-        public List<Human> humans = new List<Human>();
-
+        /// <summary>
+        /// List humans
+        /// </summary>
+        public List<Human> humans { get; set; }
+        
+        /// <summary>
+        /// Create an istance of the MainForm
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
-
+            humans = Reader.GetHuman();
         }
 
-        private static List<string> GetData()
-        {
-            List<string> data = new List<string>();
-            string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
-            using (var sr = new StreamReader(path))
-            {
-                while (!sr.EndOfStream)
-                {
-                    data.Add(sr.ReadLine());
-                }
-            }
-            return data;
-        }
-
+        /// <summary>
+        /// Show form button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShow_Click(object sender, EventArgs e)
         {
             ShowForm show = new ShowForm(humans);
 
             show.ShowDialog();
         }
-
+        /// <summary>
+        /// Close this programm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        /// <summary>
+        /// More info button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             MoreInfoForm more = new MoreInfoForm(humans);
             more.ShowDialog();
         }
-
+        /// <summary>
+        /// Inform about teacher button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             TeacherInformationForm teach = new TeacherInformationForm(humans);
             teach.ShowDialog();
         }
+
     }
 }

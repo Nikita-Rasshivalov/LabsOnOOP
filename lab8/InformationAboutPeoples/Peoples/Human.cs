@@ -45,7 +45,7 @@ namespace Peoples
         /// <summary>
         /// Load
         /// </summary>
-        public int[] load;
+        public  int[] load;
         /// <summary>
         /// Indexator
         /// </summary>
@@ -131,6 +131,18 @@ namespace Peoples
         /// </summary>
         /// <returns>information</returns>
         public abstract string GetInfo();
+
+
+        public virtual string SaveForm(int[] load)
+        {
+            string loads = "";
+            foreach (var i in load)
+            {
+                loads = loads + " " + i.ToString();
+            }
+            string info = $"{secondName} {Status} {birth} {loads} ";
+            return info;
+        }
 
     }
 }

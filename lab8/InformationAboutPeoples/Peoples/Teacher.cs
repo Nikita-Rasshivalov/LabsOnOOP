@@ -77,7 +77,7 @@ namespace Peoples
         /// <summary>
         /// Get max load
         /// </summary>
-        /// <param name="humans">humans</param>
+        /// <param name="teachers">teachers</param>
         /// <param name="subject">subject</param>
         /// <returns></returns>
         public static int MaxLoad(List<Teacher> teachers, string subject)
@@ -90,7 +90,9 @@ namespace Peoples
                     if (max < hum[subject])
                         max = hum[subject];
                 }
+               
             }
+           
             return max;
         }
 

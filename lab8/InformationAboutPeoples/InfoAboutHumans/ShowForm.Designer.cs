@@ -45,11 +45,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 360);
+            this.button2.Location = new System.Drawing.Point(12, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 32);
+            this.button2.Size = new System.Drawing.Size(115, 31);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Delete";
+            this.button2.Text = "delete";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

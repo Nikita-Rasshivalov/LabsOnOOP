@@ -19,8 +19,9 @@ namespace InfoAboutHumans
         /// </summary>
         /// <param name="path">path</param>
         /// <returns>humans list</returns>
-        public static List<Human> GetHuman(string path)
+        public static List<Human> GetHuman()
         {
+            string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
             List<Human> humans = new List<Human>();
             int addedNumber = 0;
             List<string> data = GetData(path);
@@ -49,6 +50,7 @@ namespace InfoAboutHumans
             }
             return humans;
         }
+
         /// <summary>
         /// Pare data 
         /// </summary>
@@ -89,14 +91,20 @@ namespace InfoAboutHumans
             return data;
         }
 
-       
+
+        /// <summary>
+        /// UpdateFile
+        /// </summary>
+        /// <param name="humans">humans</param>
+        /// <param name="path">path</param>
         public static void UpdateFile(List<Human> humans, string path)
         {
+
             using (var sw = new StreamWriter(path))
             {
                 foreach (var human in humans)
                 {
-                    sw.WriteLine(human.GetInfo());
+                    sw.WriteLine(human.SaveForm(human.load));
                 }
 
             }
