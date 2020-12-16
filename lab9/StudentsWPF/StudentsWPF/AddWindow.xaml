@@ -1,0 +1,23 @@
+﻿<Window x:Class="StudentsWPF.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsWPF"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Second Name" HorizontalAlignment="Left" VerticalAlignment="Top" Width="328" Margin="10,32,0,0" FontWeight="Bold" FontSize="16" Height="32"/>
+        <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,97,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="91"/>
+        <Label Content="Patronymic" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,165,0,0" FontSize="16" FontWeight="Bold" Height="32" Width="96"/>
+        <Button x:Name="AddButtom" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="143" Margin="641,376,0,0" Height="34" Click="AddButtom_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="10,376,0,0" Height="34" Click="Button_Click"/>
+        <TextBox x:Name="secondNamebox" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="firstNamebox" HorizontalAlignment="Left" Height="23" Margin="10,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="patronymicbox" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+
+    </Grid>
+</Window>

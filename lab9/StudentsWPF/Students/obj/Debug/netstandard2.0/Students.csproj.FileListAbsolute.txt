@@ -1,0 +1,9 @@
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\bin\Debug\netstandard2.0\Students.deps.json
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\bin\Debug\netstandard2.0\Students.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\bin\Debug\netstandard2.0\Students.pdb
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.csprojAssemblyReference.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.AssemblyInfoInputs.cache
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.AssemblyInfo.cs
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.dll
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\Students\obj\Debug\netstandard2.0\Students.pdb
