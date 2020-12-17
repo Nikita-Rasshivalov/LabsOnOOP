@@ -57,7 +57,7 @@ namespace StudentsWPF
 
             Exam name = GetNameOfExam();
             Names.Add(name);
-            MessageBox.Show("Name of exam was added");
+            MessageBox.Show("Exam was added");
             NameBox.Text = "";
             Close();
 

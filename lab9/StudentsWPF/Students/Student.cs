@@ -42,7 +42,10 @@ namespace Students
         /// <summary>
         /// Method for obtaining average value
         /// </summary>
-        public double Average { get { return GetAverage(); } }
+        public double Average { get {
+                //    return GetAverage(); 
+                return 0;
+            } }
         double GetAverage()
         {
             double sum = 0;

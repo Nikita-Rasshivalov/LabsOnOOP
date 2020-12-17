@@ -20,8 +20,6 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\AddWind
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\StudentsWPF.csproj.CopyComplete
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ShowInfoWindow1.g.cs
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ShowInfoWindow1.baml
-C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ExamWindow.g.cs
-C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ExamWindow.baml
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ExamNamesWindow.g.cs
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ExamNamesWindow.baml
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\bin\Debug\Exeptions.dll

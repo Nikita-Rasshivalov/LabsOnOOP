@@ -42,31 +42,15 @@ namespace StudentsWPF
             this.Students = Students;
             this.Names = Names;
             InitializeComponent();
-            FuntcionAddTable(Names, Students);
+            FuntcionAddTable(Students);
 
         }
         /// <summary>
         ///Function of drawing the table
         /// </summary>
-        void FuntcionAddTable(List<Exam> Names, List<Student> Students)
+        void FuntcionAddTable(List<Student> Students)
         {
-
-           
-
-            foreach (var stud in Students)
-            {
-                Student s = new Student(stud.FirstName,stud.SecondName,stud.ThirdName);
-                showTable.Items.Add(s);
-            }
-            int i = 3;
-            foreach (var name in Names)
-            {
-                Exam e = new Exam(name.NameOfExam);
-                showTable.Columns[i].Header=e.NameOfExam;
-                i++;
-            }
-
-
+            showTable.ItemsSource = Students;
         }
         /// <summary>
         /// Close this window
@@ -82,6 +66,11 @@ namespace StudentsWPF
         private void Edit(object sender, DataGridBeginningEditEventArgs e)
         {
               e.Cancel = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

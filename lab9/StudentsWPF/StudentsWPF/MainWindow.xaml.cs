@@ -30,14 +30,7 @@ namespace StudentsWPF
         /// </summary>
         public List<Exam> Names { get; set; }
 
-        /// <summary>
-        /// Flag for enter exams and nums of exams
-        /// </summary>
-        public static bool Flag { get; set; }
-        /// <summary>
-        /// Nums of exams
-        /// </summary>
-        public static int NumOfExams;
+    
         /// <summary>
         /// Create MainWindow
         /// </summary>
@@ -79,17 +72,9 @@ namespace StudentsWPF
 
         private void Add_Exams_Click(object sender, RoutedEventArgs e)
         {
-          
-            if (Flag == false)
-            {
-                ExamWindow exam = new ExamWindow(Names);
-
-                exam.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Exams have been added");
-            }
+            ExamNamesWindow names = new ExamNamesWindow(Names);
+            names.ShowDialog();
+             
         }
     }
 }

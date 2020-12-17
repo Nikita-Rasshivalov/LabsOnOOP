@@ -1,11 +1,11 @@
-﻿<Window x:Name="edit" x:Class="StudentsWPF.ShowInfoWindow1"
+﻿<Window x:Class="StudentsWPF.MarkTable"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="Show Information" Height="472.4" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico">
+        Title="Mark Table" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico" Background="#FFE4FCE5">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="39*"/>
@@ -19,20 +19,12 @@
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Second Name" Binding="{Binding Path=SecondName}" Width="200" />
-                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" Width="200" />
-                <DataGridTextColumn Header="Patronymic" Binding="{Binding Path=ThirdName}" Width="200" />
+                <DataGridTextColumn Header="NameOfExam" Binding="{Binding Path=NameOfExam}" Width="200" />
+                <DataGridTextColumn Header="Mark" Binding="{Binding Path=Mark}" Width="200" />
             </DataGrid.Columns>
-
-
-
-
-
-
         </DataGrid>
-        <Button Content="Back" HorizontalAlignment="Left" Height="32" Margin="10,400,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="32" Margin="10,378,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2" Click="Button_Click"/>
 
 
     </Grid>
-
 </Window>
