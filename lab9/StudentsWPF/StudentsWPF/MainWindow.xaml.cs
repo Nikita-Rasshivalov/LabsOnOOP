@@ -22,6 +22,10 @@ namespace StudentsWPF
     public partial class MainWindow : Window
     {
         /// <summary>
+        /// Array of marks
+        /// </summary>
+       public StudentMark[] Marks { get; set; }
+        /// <summary>
         /// List students
         /// </summary>
         public List<Student> Students { get; set; }
@@ -29,6 +33,8 @@ namespace StudentsWPF
         /// Listy names of exams
         /// </summary>
         public List<Exam> Names { get; set; }
+
+        
 
     
         /// <summary>
@@ -39,7 +45,6 @@ namespace StudentsWPF
             InitializeComponent();
             Students = new List<Student>();
             Names = new List<Exam>();
-
         }
         /// <summary>
         /// AddWindow button
@@ -60,7 +65,7 @@ namespace StudentsWPF
        /// <param name="e"></param>
         private void Button_Show(object sender, RoutedEventArgs e)
         {
-            ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students);
+            ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students, Marks);
             add.ShowDialog();
       
         }

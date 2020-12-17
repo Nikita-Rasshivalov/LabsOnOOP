@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Students
 {
+    /// <summary>
+    /// Class student
+    /// </summary>
     public class Student
     {
 
@@ -20,16 +23,16 @@ namespace Students
         /// <summary>
         /// Middle name
         /// </summary>
-        public string ThirdName { get; set; }
+        public string Patronymic { get; set; }
         /// <summary>
         /// Mark existnance
         /// </summary>
 
-        public Student(string FirstName, string SecondName, string ThirdName)
+        public Student(string FirstName, string SecondName, string Patronymic)
         {
             this.SecondName = SecondName;
             this.FirstName = FirstName;
-            this.ThirdName = ThirdName;
+            this.Patronymic = Patronymic;
         }
 
 
@@ -42,12 +45,18 @@ namespace Students
         /// <summary>
         /// Method for obtaining average value
         /// </summary>
-        public double Average { get {
+   /*     public  double Average { get {
                 //    return GetAverage(); 
                 return 0;
-            } }
+            } }*/
+        /// <summary>
+        /// Get acerage
+        /// </summary>
+        /// <returns>average</returns>
+        
         double GetAverage()
         {
+            
             double sum = 0;
             foreach (var studMark in Marks)
                 sum += studMark.Mark;
@@ -55,7 +64,7 @@ namespace Students
             double average = sum / Marks.Length;
             return average;
         }
-
+        
 
 
 
@@ -65,11 +74,11 @@ namespace Students
         /// <param name="firstStudent">First student</param>
         /// <param name="secondStudent">Second student</param>
         /// <returns>result of additions averages values of exam of students</returns>
-        public static double operator +(Student firstStudent, Student secondStudent)
+      /*  public static double operator +(Student firstStudent, Student secondStudent)
         {
             double result = firstStudent.Average + secondStudent.Average;
             return result;
-        }
+        }*/
 
         /// <summary>
         /// overload subtraction
@@ -77,11 +86,11 @@ namespace Students
         /// <param name="firstStudent">First student</param>
         /// <param name="secondStudent">Second student</param>
         /// <returns>result of subtractions averages values of exam of students</returns>
-        public static double operator -(Student firstStudent, Student secondStudent)
+    /*    public static double operator -(Student firstStudent, Student secondStudent)
         {
             double result = firstStudent.Average - secondStudent.Average;
             return result;
-        }
+        }*/
 
 
     }

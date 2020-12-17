@@ -21,20 +21,13 @@ namespace Students
         {
             this.Exam = Exam;
             this.Mark = Mark;
-
         }
-        /// <summary>
-        /// Mark and name of exam
-        /// </summary>
-        public StudentMark()
-        {
 
-        }
-        public Exam Exam;
+        public Exam Exam { get; set; }
         /// <summary>
         /// Mark
         /// </summary>
-        public int Mark;
+        public int Mark { get; set; }
 
 
 

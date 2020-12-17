@@ -11,23 +11,14 @@
             <ColumnDefinition Width="39*"/>
             <ColumnDefinition Width="251*"/>
             <ColumnDefinition Width="107*"/>
-        </Grid.ColumnDefinitions>
-        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="400" Margin="21.4,0,94.6,0" VerticalAlignment="Top" Width="600" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FFE4FCE5" Grid.Column="1" Grid.ColumnSpan="2"  >
+        </Grid.ColumnDefinitions> 
+              
+        <DataGrid x:Name="showTable"  HorizontalAlignment="Center" Height="400" Margin="21.4,0,94.6,0" VerticalAlignment="Top" Width="600" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FFE4FCE5" IsReadOnly="False" Grid.Column="1" Grid.ColumnSpan="2" MouseDoubleClick="showTable_MouseDoubleClick"  >
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Second Name" Binding="{Binding Path=SecondName}" Width="200" />
-                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" Width="200" />
-                <DataGridTextColumn Header="Patronymic" Binding="{Binding Path=ThirdName}" Width="200" />
-            </DataGrid.Columns>
-
-
-
-
-
 
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Height="32" Margin="10,400,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2" Click="Button_Click"/>

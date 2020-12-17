@@ -23,6 +23,11 @@ namespace StudentsWPF
     /// </summary>
     public partial class ShowInfoWindow1 : Window
     {
+
+        /// <summary>
+        /// Array of marks
+        /// </summary>
+        public StudentMark[] Marks { get; set; }
         /// <summary>
         /// List students
         /// </summary>
@@ -37,8 +42,9 @@ namespace StudentsWPF
         /// Create ShowInfoWindow1
         /// </summary>
         /// <param name="Names"></param>
-        public ShowInfoWindow1(List<Exam> Names, List<Student> Students)
+        public ShowInfoWindow1(List<Exam> Names, List<Student> Students, StudentMark[] Marks)
         {
+            this.Marks = Marks;
             this.Students = Students;
             this.Names = Names;
             InitializeComponent();
@@ -52,25 +58,34 @@ namespace StudentsWPF
         {
             showTable.ItemsSource = Students;
         }
+
+        /// <summary>
+        /// Edit is enable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Edit(object sender, DataGridBeginningEditEventArgs e)
+        {
+              e.Cancel = true;
+        }
         /// <summary>
         /// Close this window
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_ClickClose(object sender, RoutedEventArgs e)
-        {
 
-            this.Close();
-        }
-
-        private void Edit(object sender, DataGridBeginningEditEventArgs e)
-        {
-              e.Cancel = true;
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+
+
+        private void showTable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+           MarkTable mark = new MarkTable(Marks, Names);
+           mark.ShowDialog();
         }
     }
 }

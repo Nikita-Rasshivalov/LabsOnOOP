@@ -1,0 +1,5 @@
+       <DataGrid.Columns>
+                <DataGridTextColumn Header="Second Name" Binding="{Binding ElementName=, Path=SecondName}" Width="200" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" Width="200" />
+                <DataGridTextColumn Header="Patronymic" Binding="{Binding Path=ThirdName}" Width="200" />
+            </DataGrid.Columns>

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Students
 {
-
+    /// <summary>
+    /// Class exam
+    /// </summary>
     public class Exam
     {
         /// <summary>
@@ -22,7 +24,7 @@ namespace Students
         /// Class of Exam
         /// </summary>
         /// <param name="nameOfExam"></param>
-        public string NameOfExam;
+        public string NameOfExam { get; set; }
     }
 
 
