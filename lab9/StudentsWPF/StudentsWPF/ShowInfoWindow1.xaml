@@ -1,28 +1,34 @@
-﻿<Window x:Name="edit" x:Class="StudentsWPF.ShowInfoWindow1"
+﻿<Window x:Class="StudentsWPF.ShowInfoWindow1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="Show Information" Height="472.4" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="57364.ico">
+        Title="ShowInfoWindow1" Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="39*"/>
-            <ColumnDefinition Width="251*"/>
-            <ColumnDefinition Width="107*"/>
-        </Grid.ColumnDefinitions> 
-              
-        <DataGrid x:Name="showTable"  HorizontalAlignment="Center" Height="400" Margin="21.4,0,94.6,0" VerticalAlignment="Top" Width="600" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FFE4FCE5" IsReadOnly="False" Grid.Column="1" Grid.ColumnSpan="2" MouseDoubleClick="showTable_MouseDoubleClick"  >
+        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="245" Margin="185,40,327.6,0" VerticalAlignment="Top" Width="281" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
-
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding Path=SecondName}" Width="90" />
+                <DataGridTextColumn Header="SecondName" Binding="{Binding Path=FirstName}" Width="90" />
+                <DataGridTextColumn Header="ThirdName" Binding="{Binding Path=ThirdName}" Width="90" />
+            </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back" HorizontalAlignment="Left" Height="32" Margin="10,400,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2" Click="Button_Click"/>
-
+        <DataGrid x:Name="marksTable" HorizontalAlignment="Center" Height="245" Margin="460,40,210.6,0" VerticalAlignment="Top" Width="123" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="False" CanUserSortColumns="False">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="addButton" Content="Send info" HorizontalAlignment="Left" Margin="185,324,0,0" VerticalAlignment="Top" Width="76" Click="SendInfo_Click"/>
 
     </Grid>
 

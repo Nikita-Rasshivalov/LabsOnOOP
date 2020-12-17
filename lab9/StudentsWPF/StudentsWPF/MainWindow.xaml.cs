@@ -65,7 +65,7 @@ namespace StudentsWPF
        /// <param name="e"></param>
         private void Button_Show(object sender, RoutedEventArgs e)
         {
-            ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students, Marks);
+            ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students);
             add.ShowDialog();
       
         }
