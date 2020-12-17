@@ -54,6 +54,7 @@ namespace StudentsWPF
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             Exam name = GetNameOfExam();
             Names.Add(name);
             MessageBox.Show("Name of exam was added");

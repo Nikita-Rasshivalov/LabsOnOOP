@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Exeptions;
 
 namespace StudentsWPF
 {
@@ -41,7 +42,7 @@ namespace StudentsWPF
             this.Students = Students;
             this.Names = Names;
             InitializeComponent();
-            FuntcionAddTable(Names,Students);
+            FuntcionAddTable(Names, Students);
 
         }
         /// <summary>
@@ -50,16 +51,20 @@ namespace StudentsWPF
         void FuntcionAddTable(List<Exam> Names, List<Student> Students)
         {
 
-            Student s1 = new Student("Nikita", "Parashnik", "Ivvanovich");
-            StudentMark[] marks = new StudentMark[2] { new StudentMark(new Exam("OOP"), 10), new StudentMark(new Exam("OAIP"), 5) };
-            s1.Marks = marks;
-            showTable.Items.Add(s1);
+           
 
             foreach (var stud in Students)
             {
-                showTable.Items.Add(stud.ThirdName);
+                Student s = new Student(stud.FirstName,stud.SecondName,stud.ThirdName);
+                showTable.Items.Add(s);
             }
-
+            int i = 3;
+            foreach (var name in Names)
+            {
+                Exam e = new Exam(name.NameOfExam);
+                showTable.Columns[i].Header=e.NameOfExam;
+                i++;
+            }
 
 
         }
@@ -74,6 +79,10 @@ namespace StudentsWPF
             this.Close();
         }
 
-
+        private void Edit(object sender, DataGridBeginningEditEventArgs e)
+        {
+              e.Cancel = true;
+        }
     }
 }
+

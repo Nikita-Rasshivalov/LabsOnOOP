@@ -69,6 +69,7 @@ namespace StudentsWPF
         {
             ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students);
             add.ShowDialog();
+      
         }
         /// <summary>
         /// Add exams button
@@ -78,6 +79,7 @@ namespace StudentsWPF
 
         private void Add_Exams_Click(object sender, RoutedEventArgs e)
         {
+          
             if (Flag == false)
             {
                 ExamWindow exam = new ExamWindow(Names);
