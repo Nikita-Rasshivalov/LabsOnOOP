@@ -26,11 +26,11 @@ namespace InfoAboutHumans
         public ShowForm(List<Human> humans)
         {
             DataGridView dataGridView1 = new DataGridView();
-            this.dataGridView1=dataGridView1;
+            this.dataGridView1 = dataGridView1;
             InitializeComponent();
             this.Controls.Add(dataGridView1);
             this.humans = humans;
-            Funtcion( humans);
+            Funtcion(humans);
         }
         /// <summary>
         /// Create table
@@ -39,9 +39,9 @@ namespace InfoAboutHumans
         /// <param name="humans">humans</param>
         void Funtcion(List<Human> humans)
         {
-            dataGridView1.Size = new Size(580, 290);
+            dataGridView1.Size = new Size(665, 400);
             dataGridView1.RowHeadersVisible = false;
-            
+
             foreach (DataGridViewColumn column in dataGridView1.Columns)
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             var column1 = new DataGridViewColumn();
@@ -67,7 +67,7 @@ namespace InfoAboutHumans
             var column4 = new DataGridViewColumn();
             column4.HeaderText = "Data";
             column4.Name = "data";
-            column4.Width = 200;
+            column4.Width = 300;
             column4.CellTemplate = new DataGridViewTextBoxCell();
             dataGridView1.Columns.Add(column1);
             dataGridView1.Columns.Add(column2);
@@ -76,19 +76,24 @@ namespace InfoAboutHumans
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
-            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
-            dataGridView1.Columns[3].SortMode = DataGridViewColumnSortMode.Automatic;
+            int firstColumn = 0;
+            int secondColumn = 1;
+            int thirdColumn = 0;
+            int fourthColumn = 0;
+            dataGridView1.Columns[firstColumn].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[secondColumn].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[thirdColumn].SortMode = DataGridViewColumnSortMode.Automatic;
+            dataGridView1.Columns[fourthColumn].SortMode = DataGridViewColumnSortMode.Automatic;
             dataGridView1.ReadOnly = true;
-            humans.Sort();
+
             foreach (var hum in humans)
             {
-                dataGridView1.Rows.Add(hum.secondName, hum.birth,hum.Status, hum.Loads);  
+                dataGridView1.Rows.Add(hum.secondName, hum.birth, hum.Status, hum.Loads);
             }
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-           
-                if (DateTime.Now.Year - Convert.ToInt32(row.Cells[1].Value ) > 19 &&  row.Cells[2].Value.ToString() == "Student")
+
+                if (DateTime.Now.Year - Convert.ToInt32(row.Cells[1].Value) > 19 && row.Cells[2].Value.ToString() == "Student")
                 {
                     row.DefaultCellStyle.ForeColor = Color.Red;
                 }
@@ -98,23 +103,48 @@ namespace InfoAboutHumans
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
             FunctionDelete(humans);
         }
-        public void FunctionDelete( List<Human> humans )
+        public void FunctionDelete(List<Human> humans)
         {
-         
-            int selectedIndex = dataGridView1.CurrentRow.Index; 
+
+            int selectedIndex = dataGridView1.CurrentRow.Index;
             dataGridView1.Rows.RemoveAt(selectedIndex);
-            humans.RemoveAt(selectedIndex); 
+            humans.RemoveAt(selectedIndex);
 
             //MessageBox.Show("Human was deleted");
-            
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+
             Close();
+        }
+        public void GetRandom(DataGridView dataGridView1)
+        {
+            Random rnd = new Random();
+            int birth = rnd.Next(1970, 2005);
+            Random rndTwo = new Random();
+            int stat = rndTwo.Next(1, 3);
+            
+            string name = Guid.NewGuid().ToString();
+            StatusOfHuman status = StatusOfHuman.Unknown;
+
+            if (Enum.IsDefined(typeof(StatusOfHuman), stat))
+                status = (StatusOfHuman)stat;
+
+            string loads = name + birth + status;
+            dataGridView1.Rows.Add(name, birth, status,loads);
+
+
+
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GetRandom(dataGridView1);
         }
     }
 }

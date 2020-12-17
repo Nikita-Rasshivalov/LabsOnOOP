@@ -23,7 +23,7 @@ namespace InfoAboutHumans
         public TeacherInformationForm(List<Human> humans)
         {
             InitializeComponent();
-            Function(humans);
+            GetTeacherLoad(humans);
         }
         /// <summary>
         /// 
@@ -38,17 +38,18 @@ namespace InfoAboutHumans
         /// Teacher loads
         /// </summary>
         /// <param name="humans">humans</param>
-        public void Function(List<Human> humans)
+        public void GetTeacherLoad(List<Human> humans)
         {
             humans = Reader.GetHuman();
             var teachersList = new List<Teacher>();
             string info = "";
+            string birth = ("years");
             foreach (var hum in humans)
             {
                 if (hum.Status == StatusOfHuman.Teacher && (DateTime.Now.Year - hum.birth)>40)
                 {
                     teachersList.Add((Teacher)hum);
-                    info += hum.secondName+ " " + hum.YearsOld + " " + ("years") + " " + hum.ConvertToString(hum.load) + '\n';
+                    info += hum.secondName+ " " + hum.YearsOld + " " + birth + " " + hum.ConvertToString(hum.load) + '\n';
                  
 
                 }

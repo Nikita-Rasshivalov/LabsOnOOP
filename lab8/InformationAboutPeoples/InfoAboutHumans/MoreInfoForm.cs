@@ -23,7 +23,7 @@ namespace InfoAboutHumans
         public MoreInfoForm(List<Human> humans)
         {
             InitializeComponent();
-            FunctionStudent(humans).ToString();
+            GetStudentLoda(humans).ToString();
 
         }
 
@@ -34,7 +34,7 @@ namespace InfoAboutHumans
         /// <param name="humans">humans</param>
         /// <returns>counter</returns>
 
-        int FunctionStudent(List<Human> humans)
+        int GetStudentLoda(List<Human> humans)
         {
             humans = Reader.GetHuman();
             int counter = 0;

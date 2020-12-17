@@ -14,7 +14,7 @@ namespace InfoAboutHumans
         /// <summary>
         /// List humans
         /// </summary>
-        public List<Human> humans { get; set; }
+        public List<Human> Humans { get; set; }
         
         /// <summary>
         /// Create an istance of the MainForm
@@ -22,7 +22,7 @@ namespace InfoAboutHumans
         public MainForm()
         {
             InitializeComponent();
-            humans = Reader.GetHuman();
+            Humans = Reader.GetHuman();
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace InfoAboutHumans
         /// <param name="e"></param>
         private void btnShow_Click(object sender, EventArgs e)
         {
-            ShowForm show = new ShowForm(humans);
+            ShowForm show = new ShowForm(Humans);
 
             show.ShowDialog();
         }
@@ -52,7 +52,7 @@ namespace InfoAboutHumans
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            MoreInfoForm more = new MoreInfoForm(humans);
+            MoreInfoForm more = new MoreInfoForm(Humans);
             more.ShowDialog();
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace InfoAboutHumans
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            TeacherInformationForm teach = new TeacherInformationForm(humans);
+            TeacherInformationForm teach = new TeacherInformationForm(Humans);
             teach.ShowDialog();
         }
 

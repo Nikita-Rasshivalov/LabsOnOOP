@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,21 @@ namespace InfoAboutHumans
         {
             string path = @"C:\Users\nikit\Desktop\OOP\LabsC#\lab8\InfoAboutPeoples.txt";
             List<Human> humans = new List<Human>();
-            int addedNumber = 0;
             List<string> data = GetData(path);
             foreach (var stringHuman in data)
             {
                 string[] humanValues = stringHuman.Split();
-               
+                const int humanStatus = 2;
+                const int humanBirth = 1;
+                const int numLoad = 3;
                 string secondName = humanValues[0];
 
                 StatusOfHuman status;
-                Enum.TryParse(humanValues[2], true, out status);
+                Enum.TryParse(humanValues[humanStatus], true, out status);
                 int birthDate;
-                int.TryParse(humanValues[1], out birthDate);
+                int.TryParse(humanValues[humanBirth], out birthDate);
                 List<string> stringLoad = new List<string>();
-                for (var i = 3; i < humanValues.Length; i++)
+                for (var i = numLoad; i < humanValues.Length; i++)
                 {
                     stringLoad.Add(humanValues[i]);
                 }
@@ -45,7 +47,7 @@ namespace InfoAboutHumans
                 if (human != null)
                 {
                     humans.Add(human);
-                    addedNumber++;
+              
                 }
             }
             return humans;

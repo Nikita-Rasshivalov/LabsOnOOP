@@ -34,12 +34,12 @@ namespace Peoples
         public override string ConvertToString(int[] load)
         {
             string loads = "";
-
+            string nameLoad = " (Marks) ";
             foreach (var i in load)
             {
                 loads = loads + " " + i.ToString();
             }
-            loads += " (Marks) ";            
+            loads += nameLoad;            
             return loads;
         }
 
@@ -89,7 +89,8 @@ namespace Peoples
         public override string GetInfo()
         {
             double average = Svedenija();
-            string info = $"{secondName} {Status} {YearsOld} | {average} {"(Average mark)"}";
+            string nameLoad = "( Average mark )";
+            string info = $"{secondName} {Status} {YearsOld} | {average} {nameLoad}";
             return info;
         }
     }

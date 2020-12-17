@@ -11,6 +11,7 @@ namespace Peoples
     /// </summary>
     public enum StatusOfHuman
     {
+        Unknown = 0,
         Student,
         Teacher,
         Bom
@@ -84,7 +85,7 @@ namespace Peoples
             if (p != null)
                 return this.secondName.CompareTo(p.secondName);
             else
-                throw new Exception("Невозможно сравнить два объекта");
+                throw new Exception("Impossible to compate two objects");
         }
         /// <summary>
         /// Convert To String

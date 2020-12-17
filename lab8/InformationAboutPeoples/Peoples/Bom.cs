@@ -33,11 +33,12 @@ namespace Peoples
         public override string ConvertToString(int[] load)
         {
             string loads = "";
+            string nameLoad = "( Count bottles )";
             foreach (var i in load)
             {
                 loads = loads + " " + i.ToString();
             }
-            loads += " (Count bottles) ";
+            loads += nameLoad;
             return loads;
         }
         /// <summary>
@@ -76,7 +77,8 @@ namespace Peoples
         public override string GetInfo()
         {
             double bottles = Svedenija();
-            string info = $"{secondName} {Status} {YearsOld} | {bottles} {"(Count bottles)"}";
+            string load = "(Count bottles)";
+            string info = $"{secondName} {Status} {YearsOld} | {bottles} {load}";
             return info;
         }
     }
