@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Students;
+using Exeptions;
 
 namespace StudentsWPF
 {
@@ -24,7 +25,7 @@ namespace StudentsWPF
         /// <summary>
         /// Array of marks
         /// </summary>
-       public StudentMark[] Marks { get; set; }
+        public StudentMark[] Marks { get; set; }
         /// <summary>
         /// List students
         /// </summary>
@@ -34,9 +35,9 @@ namespace StudentsWPF
         /// </summary>
         public List<Exam> Names { get; set; }
 
-        
 
-    
+
+
         /// <summary>
         /// Create MainWindow
         /// </summary>
@@ -56,18 +57,34 @@ namespace StudentsWPF
         {
             AddWindow add = new AddWindow(Students);
             add.ShowDialog();
+
         }
 
-       /// <summary>
-       /// ShowWindow button
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        /// <summary>
+        /// ShowWindow button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Show(object sender, RoutedEventArgs e)
         {
-            ShowInfoWindow1 add = new ShowInfoWindow1(Names,Students);
-            add.ShowDialog();
-      
+            
+            
+
+            try
+            {
+                if (Students.Count==0)
+                {
+                    throw new OutOfRangeException("Count of students is zero!");
+                }
+                ShowInfoWindow1 add = new ShowInfoWindow1(Names, Students);
+                add.ShowDialog();
+            }
+            catch (OutOfRangeException)
+            {
+
+                MessageBox.Show("Count of students is zero!");
+            }
+
         }
         /// <summary>
         /// Add exams button
@@ -79,7 +96,7 @@ namespace StudentsWPF
         {
             ExamNamesWindow names = new ExamNamesWindow(Names);
             names.ShowDialog();
-             
+
         }
     }
 }

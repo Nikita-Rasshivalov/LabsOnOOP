@@ -18,85 +18,62 @@ namespace StudentsWPF
 
 
     /// <summary>
-    /// Логика взаимодействия для ShowInfoWindow1.xaml
+    /// class ShowInfoWindow1
     /// </summary>
     public partial class ShowInfoWindow1 : Window
     {
+        /// <summary>
+        /// List marks
+        /// </summary>
         protected List<int[]> Marks { get; set; }
+        /// <summary>
+        /// List names
+        /// </summary>
         protected List<Exam> Names { get; set; }
+        /// <summary>
+        /// List students
+        /// </summary>
         protected List<Student> Students { get; set; }
+        /// <summary>
+        /// Create ShowInfoWindow1
+        /// </summary>
+        /// <param name="names">names of student</param>
+        /// <param name="students"students></param>
         public ShowInfoWindow1(List<Exam> names, List<Student> students)
         {
-           // names = new List<Exam>(3) { new Exam("OOP"), new Exam("Math"), new Exam("OAIP") };
-           //students = new List<Student>(3) { new Student("Ivan", "Dubikov", "GGG"), new Student("Artom", "NeDubiliv", "GGG"), new Student("Nikita", "Dubikov", "GGG") };
-          //  Marks = new List<int[]>(3) { new int[3] { 10, 9, 8 }, new int[3] { 10, 9, 8 }, new int[3] { 10, 9, 8 } };
+
+            
+            for (int i = 0; i < students.Count; i++)
+            {
+                Marks.Add(new int[names.Count]);
+            }
+
             this.Names = names;
             this.Students = students;
-            FillExamNames();
             InitializeComponent();
             FillTable();
         }
-        private void FillExamNames()
-        {
-            foreach (var student in Students)
-            {
-                student.Marks = new StudentMark[Names.Count];
-                for (var i = 0; i < student.Marks.Length; i++)
-                {
-                    student.Marks[i] = new StudentMark(Names[i], 0);
-                }
-            }
-        }
+       
         /// <summary>
         ///Function of drawing the table
         /// </summary>
         private void FillTable()
         {
-            for (var i = 0; i < Marks[0].Length; i++)
-            {
-                var textColumn = new DataGridTextColumn();
-                textColumn.Header = Names[i].NameOfExam;
-                textColumn.Binding = new Binding(string.Format($"[{i}]"));
-                marksTable.Columns.Add(textColumn);
-            }
+
             marksTable.ItemsSource = Marks;
             showTable.ItemsSource = Students;
         }
 
-        private void Button_ClickClose(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
+        /// <summary>
+        /// Open window for set marks
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SendInfo_Click(object sender, RoutedEventArgs e)
         {
-            bool isCorrect = true;
-            for (var i = 0; i < Students.Count && isCorrect == true; i++)
-            {
-                for (var j = 0; j < Students[i].Marks.Length && isCorrect == true; j++)
-                {
-                    MessageBox.Show($"{i} {j} {Students[i].Marks.Length}");
-                    if (Marks[i][j] >= 1 && Marks[i][j] <= 10)
-                    {
-                        Students[i].Marks[j].Mark = Marks[i][j];
-                    }
-                    else
-                    {
-                        isCorrect = false;
-                    }
-                }
-            }
-            string message;
-            if (isCorrect == true)
-            {
-                message = "Marks succesfull have been added!";
-            }
-            else
-            {
-                message = "Incorrect marks";
-            }
-            MessageBox.Show(message);
-            this.Close();
+            SetMarksWindow set = new SetMarksWindow(Names,Students);
+            set.ShowDialog();
         }
     }
 }

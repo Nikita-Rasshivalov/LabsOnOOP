@@ -1,13 +1,13 @@
-﻿<Window x:Class="StudentsWPF.ShowInfoWindow1"
+﻿<Window x:Class="StudentsWPF.SetMarksWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentsWPF"
         mc:Ignorable="d"
-        Title="ShowInfo" Height="450" Width="800" ResizeMode="CanMinimize" Background="#FFE4FCE5">
+        Title="SetMarksWindow" Height="450" Width="800" Background="#FFE4FCE5" ResizeMode="CanMinimize" Icon="57364.ico" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="321" Margin="73,40,327.6,0" VerticalAlignment="Top" Width="393" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False">
+        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="321" Margin="47,36,366.6,0" VerticalAlignment="Top" Width="380" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -17,7 +17,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="marksTable" AutoGenerateColumns="False" HorizontalAlignment="Center" Height="321" Margin="460,40,31.6,0" VerticalAlignment="Top" Width="302" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False">
+        <DataGrid x:Name="marksTable" AutoGenerateColumns="False" HorizontalAlignment="Center" Height="321" Margin="398,36,40.6,0" VerticalAlignment="Top" Width="355" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="False" CanUserSortColumns="False">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -26,8 +26,6 @@
             <DataGrid.Columns>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="addButton" Content="Set marks" HorizontalAlignment="Left" Margin="73,369,0,0" VerticalAlignment="Top" Width="76" Click="SendInfo_Click"/>
-
+        <Button x:Name="addButton" Content="Send info" HorizontalAlignment="Left" Margin="73,369,0,0" VerticalAlignment="Top" Width="76" Click="SendInfo_Click"/>
     </Grid>
-
 </Window>

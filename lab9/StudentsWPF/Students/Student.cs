@@ -45,26 +45,30 @@ namespace Students
         /// <summary>
         /// Method for obtaining average value
         /// </summary>
-   /*     public  double Average { get {
-                //    return GetAverage(); 
-                return 0;
-            } }*/
+/*        public double Average
+        {
+            get
+            {
+                return GetAverage();
+            
+            }
+        }*/
         /// <summary>
         /// Get acerage
         /// </summary>
         /// <returns>average</returns>
-        
-        double GetAverage()
+
+/*        double GetAverage()
         {
-            
+
             double sum = 0;
             foreach (var studMark in Marks)
                 sum += studMark.Mark;
 
             double average = sum / Marks.Length;
             return average;
-        }
-        
+        }*/
+
 
 
 
@@ -74,11 +78,11 @@ namespace Students
         /// <param name="firstStudent">First student</param>
         /// <param name="secondStudent">Second student</param>
         /// <returns>result of additions averages values of exam of students</returns>
-      /*  public static double operator +(Student firstStudent, Student secondStudent)
-        {
-            double result = firstStudent.Average + secondStudent.Average;
-            return result;
-        }*/
+        /*  public static double operator +(Student firstStudent, Student secondStudent)
+          {
+              double result = firstStudent.Average + secondStudent.Average;
+              return result;
+          }*/
 
         /// <summary>
         /// overload subtraction
@@ -86,11 +90,11 @@ namespace Students
         /// <param name="firstStudent">First student</param>
         /// <param name="secondStudent">Second student</param>
         /// <returns>result of subtractions averages values of exam of students</returns>
-    /*    public static double operator -(Student firstStudent, Student secondStudent)
-        {
-            double result = firstStudent.Average - secondStudent.Average;
-            return result;
-        }*/
+        /*    public static double operator -(Student firstStudent, Student secondStudent)
+            {
+                double result = firstStudent.Average - secondStudent.Average;
+                return result;
+            }*/
 
 
     }
