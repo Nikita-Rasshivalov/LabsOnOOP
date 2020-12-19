@@ -21,85 +21,29 @@ namespace StudentsWPF
     public partial class SetMarksWindow : Window
     {
         /// <summary>
-        /// List marks
+        /// Stent
         /// </summary>
-        protected List<int[]> Marks { get; set; }
-        /// <summary>
-        /// List names
-        /// </summary>
-        protected List<Exam> Names { get; set; }
-        /// <summary>
-        /// List students
-        /// </summary>
-        protected List<Student> Students { get; set; }
+        private Student Stud { get; set; }
+     
         /// <summary>
         /// Create ShowInfoWindow1
         /// </summary>
         /// <param name="names">names of student</param>
         /// <param name="students"students></param>
-        public SetMarksWindow(List<Exam> names, List<Student> students)
+        public SetMarksWindow(Student stud)
         {
-          
-            Marks = new List<int[]>();
-            for (int i = 0; i < students.Count; i++)
-            {
-                Marks.Add(new int[names.Count]);
-            }
-
-            this.Names = names;
-            this.Students = students;
-            InitializeComponent();
-            FillExamNames();
+            this.Stud = stud;
             InitializeComponent();
             FillTable();
         }
-        /// <summary>
-        /// Fill table
-        /// </summary>
-        private void FillExamNames()
-        {
-           
-        }
-
         /// <summary>
         ///Function of drawing the table
         /// </summary>
         private void FillTable()
         {
       
-            marksTable.ItemsSource = Students;
+            marksTable.ItemsSource = Stud.Marks;
 
-        }
-
-        private void SendInfo_Click(object sender, RoutedEventArgs e)
-        {
-           /* bool isCorrect = true;
-            for (var i = 0; i < Students.Count && isCorrect == true; i++)
-            {
-                for (var j = 0; j < Students[i].Marks.Length && isCorrect == true; j++)
-                {
-                    //MessageBox.Show($"{i} {j} {Students[i].Marks.Length}");
-                    if (Marks[i][j] >= 1 && Marks[i][j] <= 10)
-                    {
-                        Students[i].Marks[j].Mark = Marks[i][j];
-                    }
-                    else
-                    {
-                        isCorrect = false;
-                    }
-                }
-            }
-            string message;
-            if (isCorrect == true)
-            {
-                message = "Marks succesfull have been added!";
-            }
-            else
-            {
-                message = "Incorrect marks";
-            }
-            MessageBox.Show(message);
-            this.Close();*/
         }
         /// <summary>
         /// Close window button

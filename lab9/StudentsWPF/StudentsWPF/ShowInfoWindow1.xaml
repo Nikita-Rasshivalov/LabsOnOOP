@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ShowInfo" Height="450" Width="800" ResizeMode="CanMinimize" Background="#FFE4FCE5" Icon="57364.ico" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="358" Margin="233,10,258.6,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="302" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False" MouseDoubleClick="showTable_MouseDoubleClick">
+        <DataGrid x:Name="showTable" HorizontalAlignment="Center" Height="358" Margin="233,10,257.6,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="303" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" CanUserSortColumns="False" MouseDoubleClick="showTable_MouseDoubleClick">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -17,6 +17,7 @@
                 <DataGridTextColumn Header="Second name" Binding="{Binding Path=SecondName}" Width="100" />
                 <DataGridTextColumn Header="First name" Binding="{Binding Path=FirstName}" Width="100" />
                 <DataGridTextColumn Header="Patronymic" Binding="{Binding Path=Patronymic}" Width="100" />
+
 
             </DataGrid.Columns>
         </DataGrid>

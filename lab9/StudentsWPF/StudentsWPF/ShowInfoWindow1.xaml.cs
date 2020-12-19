@@ -24,10 +24,6 @@ namespace StudentsWPF
     {
 
         /// <summary>
-        /// List marks
-        /// </summary>
-        protected List<int[]> Marks { get; set; }
-        /// <summary>
         /// List names
         /// </summary>
         protected List<Exam> Names { get; set; }
@@ -91,7 +87,7 @@ namespace StudentsWPF
         /// <param name="e"></param>
         private void AddMarks_Click(object sender, RoutedEventArgs e)
         {
-            SetMarksWindow set = new SetMarksWindow(Names,Students);
+            SetMarksWindow set = new SetMarksWindow((Student)showTable.SelectedItem);
             set.ShowDialog();
         }
     }

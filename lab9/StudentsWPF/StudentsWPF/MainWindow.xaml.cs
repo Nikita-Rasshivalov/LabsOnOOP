@@ -36,8 +36,6 @@ namespace StudentsWPF
         public List<Exam> Names { get; set; }
 
 
-        public Student Stud { get; set; }
-
         /// <summary>
         /// Create MainWindow
         public MainWindow()
@@ -98,5 +96,7 @@ namespace StudentsWPF
             names.ShowDialog();
 
         }
+
+        
     }
 }
