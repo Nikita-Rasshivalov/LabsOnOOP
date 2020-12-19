@@ -87,8 +87,17 @@ namespace StudentsWPF
         /// <param name="e"></param>
         private void AddMarks_Click(object sender, RoutedEventArgs e)
         {
-            SetMarksWindow set = new SetMarksWindow((Student)showTable.SelectedItem);
-            set.ShowDialog();
+            if (showTable.SelectedItem==null)
+            {
+                MessageBox.Show("Choose student please");
+            }
+            else
+            {
+                SetMarksWindow set = new SetMarksWindow((Student)showTable.SelectedItem);
+                set.ShowDialog();
+
+            }
+            
         }
     }
 }

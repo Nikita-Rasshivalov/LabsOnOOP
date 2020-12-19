@@ -41,7 +41,6 @@ namespace StudentsWPF
         /// </summary>
         private void FillTable()
         {
-      
             marksTable.ItemsSource = Stud.Marks;
 
         }
