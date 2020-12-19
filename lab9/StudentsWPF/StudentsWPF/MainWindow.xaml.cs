@@ -36,13 +36,13 @@ namespace StudentsWPF
         public List<Exam> Names { get; set; }
 
 
-
+        public Student Stud { get; set; }
 
         /// <summary>
         /// Create MainWindow
-        /// </summary>
         public MainWindow()
         {
+
             InitializeComponent();
             Students = new List<Student>();
             Names = new List<Exam>();
@@ -67,12 +67,12 @@ namespace StudentsWPF
         /// <param name="e"></param>
         private void Button_Show(object sender, RoutedEventArgs e)
         {
-            
-            
+
+
 
             try
             {
-                if (Students.Count==0)
+                if (Students.Count == 0)
                 {
                     throw new OutOfRangeException("Count of students is zero!");
                 }

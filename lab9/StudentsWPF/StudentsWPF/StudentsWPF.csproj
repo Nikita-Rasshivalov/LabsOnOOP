@@ -60,6 +60,9 @@
     <Compile Include="ExamNamesWindow.xaml.cs">
       <DependentUpon>ExamNamesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListExams.xaml.cs">
+      <DependentUpon>ListExams.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SetMarksWindow.xaml.cs">
       <DependentUpon>SetMarksWindow.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ExamNamesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListExams.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

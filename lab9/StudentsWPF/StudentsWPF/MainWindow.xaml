@@ -11,9 +11,8 @@
             <ColumnDefinition Width="192*"/>
             <ColumnDefinition Width="601*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Add student" HorizontalAlignment="Left" Height="43" Margin="80,105,0,0" VerticalAlignment="Top" Width="249" FontSize="16" Click="Button_Add" Grid.Column="1"/>
-        <Button Content="Show Information" HorizontalAlignment="Left" Height="43" Margin="80,168,0,0" VerticalAlignment="Top" Width="249" FontSize="16" Click="Button_Show" Grid.Column="1"/>
-        <Button x:Name="Add_Exams" Content="Add exams" Grid.Column="1" HorizontalAlignment="Left" Height="47" Margin="80,30,0,0" VerticalAlignment="Top" Width="249" Click="Add_Exams_Click"/>
+        <Button Content="Add student" HorizontalAlignment="Left" Height="43" Margin="80,128,0,0" VerticalAlignment="Top" Width="249" FontSize="16" Click="Button_Add" Grid.Column="1"/>
+        <Button Content="Show Information" HorizontalAlignment="Left" Height="43" Margin="80,213,0,0" VerticalAlignment="Top" Width="249" FontSize="16" Click="Button_Show" Grid.Column="1"/>
 
     </Grid>
 </Window>

@@ -26,3 +26,5 @@ C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\bin\Debug\Exeptio
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\bin\Debug\Exeptions.pdb
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\SetMarksWindow.g.cs
 C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\SetMarksWindow.baml
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ListExams.g.cs
+C:\Users\nikit\Desktop\OOP\LabsC#\lab9\StudentsWPF\StudentsWPF\obj\Debug\ListExams.baml

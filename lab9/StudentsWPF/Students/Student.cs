@@ -28,11 +28,13 @@ namespace Students
         /// Mark existnance
         /// </summary>
 
-        public Student(string FirstName, string SecondName, string Patronymic)
+        public Student(string firstName, string secondName, string patronymic)
         {
-            this.SecondName = SecondName;
-            this.FirstName = FirstName;
-            this.Patronymic = Patronymic;
+            this.SecondName = secondName;
+            this.FirstName = firstName;
+            this.Patronymic = patronymic;
+            Marks = new List<StudentMark>();
+
         }
 
 
@@ -40,7 +42,7 @@ namespace Students
         /// Stud marks
         /// </summary>
 
-        public StudentMark[] Marks;
+        public List<StudentMark> Marks { get; set; }
 
         /// <summary>
         /// Method for obtaining average value
@@ -68,40 +70,5 @@ namespace Students
             double average = sum / Marks.Length;
             return average;
         }*/
-
-
-
-
-        /// <summary>
-        /// overload addition
-        /// </summary>
-        /// <param name="firstStudent">First student</param>
-        /// <param name="secondStudent">Second student</param>
-        /// <returns>result of additions averages values of exam of students</returns>
-        /*  public static double operator +(Student firstStudent, Student secondStudent)
-          {
-              double result = firstStudent.Average + secondStudent.Average;
-              return result;
-          }*/
-
-        /// <summary>
-        /// overload subtraction
-        /// </summary>
-        /// <param name="firstStudent">First student</param>
-        /// <param name="secondStudent">Second student</param>
-        /// <returns>result of subtractions averages values of exam of students</returns>
-        /*    public static double operator -(Student firstStudent, Student secondStudent)
-            {
-                double result = firstStudent.Average - secondStudent.Average;
-                return result;
-            }*/
-
-
     }
-
-
-
-
-
-
 }

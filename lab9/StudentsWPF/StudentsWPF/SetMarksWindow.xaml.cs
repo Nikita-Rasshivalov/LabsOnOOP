@@ -58,14 +58,7 @@ namespace StudentsWPF
         /// </summary>
         private void FillExamNames()
         {
-            foreach (var student in Students)
-            {
-                student.Marks = new StudentMark[Names.Count];
-                for (var i = 0; i < student.Marks.Length; i++)
-                {
-                    student.Marks[i] = new StudentMark(Names[i], 0);
-                }
-            }
+           
         }
 
         /// <summary>
@@ -73,20 +66,14 @@ namespace StudentsWPF
         /// </summary>
         private void FillTable()
         {
-            for (var i = 0; i < Marks[0].Length; i++)
-            {
-                var textColumn = new DataGridTextColumn();
-                textColumn.Header = Names[i].NameOfExam;
-                textColumn.Binding = new Binding(string.Format($"[{i}]"));
-                marksTable.Columns.Add(textColumn);
-            }
-            marksTable.ItemsSource = Marks;
-            showTable.ItemsSource = Students;
+      
+            marksTable.ItemsSource = Students;
+
         }
 
         private void SendInfo_Click(object sender, RoutedEventArgs e)
         {
-            bool isCorrect = true;
+           /* bool isCorrect = true;
             for (var i = 0; i < Students.Count && isCorrect == true; i++)
             {
                 for (var j = 0; j < Students[i].Marks.Length && isCorrect == true; j++)
@@ -112,7 +99,16 @@ namespace StudentsWPF
                 message = "Incorrect marks";
             }
             MessageBox.Show(message);
-            this.Close();
+            this.Close();*/
+        }
+        /// <summary>
+        /// Close window button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

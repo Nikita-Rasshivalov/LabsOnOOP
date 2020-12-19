@@ -22,6 +22,7 @@ namespace StudentsWPF
     /// </summary>
     public partial class ShowInfoWindow1 : Window
     {
+
         /// <summary>
         /// List marks
         /// </summary>
@@ -42,12 +43,6 @@ namespace StudentsWPF
         public ShowInfoWindow1(List<Exam> names, List<Student> students)
         {
 
-            
-            for (int i = 0; i < students.Count; i++)
-            {
-                Marks.Add(new int[names.Count]);
-            }
-
             this.Names = names;
             this.Students = students;
             InitializeComponent();
@@ -59,8 +54,6 @@ namespace StudentsWPF
         /// </summary>
         private void FillTable()
         {
-
-            marksTable.ItemsSource = Marks;
             showTable.ItemsSource = Students;
         }
 
@@ -71,6 +64,32 @@ namespace StudentsWPF
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SendInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ExamNamesWindow exam = new ExamNamesWindow(Names);
+            exam.ShowDialog();
+        }
+        /// <summary>
+        /// Show table button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void showTable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+            ListExams set = new ListExams(Names, (Student)showTable.SelectedItem);
+            set.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        /// <summary>
+        /// Add mark button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddMarks_Click(object sender, RoutedEventArgs e)
         {
             SetMarksWindow set = new SetMarksWindow(Names,Students);
             set.ShowDialog();

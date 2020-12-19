@@ -17,10 +17,10 @@ namespace Students
         /// </summary>
         /// <param name="Exam">name exam</param>
         /// <param name="Mark">mark on exam</param>
-        public StudentMark(Exam Exam, int Mark)
+        public StudentMark(Exam exam, int mark)
         {
-            this.Exam = Exam;
-            this.Mark = Mark;
+            this.Exam = exam;
+            this.Mark = mark;
         }
 
         public Exam Exam { get; set; }

@@ -63,8 +63,10 @@ namespace StudentsWPF
             {
                 Names.Add(name);
                 MessageBox.Show("Exam was added");
-                
-                Close();
+                NameBox.Text = "";
+
+
+
             }
            
  
